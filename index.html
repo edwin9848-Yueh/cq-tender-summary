@@ -39,6 +39,9 @@
     th { color:#475467; font-size:13px; background:#f0f3f7; position:sticky; top:0; }
     td { font-size:14px; line-height:1.55; }
     .title-link { color:#0f3f8f; text-decoration:none; font-weight:600; }
+    .title-link:hover { text-decoration:underline; }
+    .amount-line { margin-top:6px; color:#344054; font-size:13px; }
+    .amount-line strong { color:#b4232a; font-weight:700; }
     .pill { display:inline-flex; align-items:center; min-height:24px; padding:2px 8px; border-radius:999px; background:#eef4ff; color:#1849a9; font-size:12px; white-space:nowrap; }
     .pill.type { background:#ecfdf3; color:#067647; }
     .muted { color:var(--muted); }
@@ -65,8 +68,8 @@
     <div class="stats">
       <div class="stat"><b>500</b><span>公告总量</span></div>
       <div class="stat"><b>26</b><span>发布日期数</span></div>
-      <div class="stat"><b>2026-04-30</b><span>最新发布日期</span></div>
-      <div class="stat"><b>2026-05-01</b><span>最早发布日期</span></div>
+      <div class="stat"><b>2026-05-15</b><span>最新发布日期</span></div>
+      <div class="stat"><b>2026-04-09</b><span>最早发布日期</span></div>
     </div>
     <div class="grid">
       <section>
@@ -87,7 +90,7 @@
       <section>
         <h2>类型分布</h2>
         <div class="bars">
-          <div class="bar"><span>施工</span><span class="track"><i style="width:100%"></i></span><b>246</b></div><div class="bar"><span>其他</span><span class="track"><i style="width:50%"></i></span><b>123</b></div><div class="bar"><span>设计</span><span class="track"><i style="width:16.666666666666664%"></i></span><b>41</b></div><div class="bar"><span>采购/设备</span><span class="track"><i style="width:15.447154471544716%"></i></span><b>38</b></div><div class="bar"><span>EPC/总承包</span><span class="track"><i style="width:10.975609756097562%"></i></span><b>27</b></div><div class="bar"><span>监理</span><span class="track"><i style="width:5.691056910569105%"></i></span><b>14</b></div><div class="bar"><span>运营/服务</span><span class="track"><i style="width:4.471544715447155%"></i></span><b>11</b></div>
+          <div class="bar"><span>施工</span><span class="track"><i style="width:100%"></i></span><b>175</b></div><div class="bar"><span>其他</span><span class="track"><i style="width:70.28571428571428%"></i></span><b>123</b></div><div class="bar"><span>采购/设备</span><span class="track"><i style="width:29.714285714285715%"></i></span><b>52</b></div><div class="bar"><span>勘察</span><span class="track"><i style="width:25.142857142857146%"></i></span><b>44</b></div><div class="bar"><span>设计</span><span class="track"><i style="width:20.57142857142857%"></i></span><b>36</b></div><div class="bar"><span>监理</span><span class="track"><i style="width:16%"></i></span><b>28</b></div><div class="bar"><span>EPC/总承包</span><span class="track"><i style="width:15.428571428571427%"></i></span><b>27</b></div><div class="bar"><span>运营/服务</span><span class="track"><i style="width:8.571428571428571%"></i></span><b>15</b></div>
         </div>
       </section>
       <section>
@@ -100,7 +103,7 @@
 
     <div class="controls">
       <input id="q" placeholder="搜索标题、区县、类型，例如：监理、开州、污水">
-      <select id="type"><option value="">全部类型</option><option>施工</option><option>其他</option><option>设计</option><option>采购/设备</option><option>EPC/总承包</option><option>监理</option><option>运营/服务</option></select>
+      <select id="type"><option value="">全部类型</option><option>施工</option><option>其他</option><option>采购/设备</option><option>勘察</option><option>设计</option><option>监理</option><option>EPC/总承包</option><option>运营/服务</option></select>
       <select id="district"><option value="">全部区县线索</option><option>未明显标注</option><option>开州</option><option>云阳</option><option>垫江</option><option>黔江</option><option>大足</option><option>彭水</option><option>綦江</option><option>秀山</option><option>高新区</option><option>万州</option><option>江津</option><option>南岸</option><option>涪陵</option><option>荣昌</option><option>沙坪坝</option><option>武隆</option><option>长寿</option><option>忠县</option><option>丰都</option><option>巫山</option><option>奉节</option><option>九龙坡</option><option>梁平</option><option>铜梁</option><option>潼南</option><option>永川</option><option>北碚</option><option>江北</option><option>渝北</option><option>渝中</option><option>巴南</option><option>两江新区</option><option>南川</option><option>石柱</option><option>巫溪</option><option>酉阳</option><option>璧山</option><option>大渡口</option><option>合川</option><option>城口</option></select>
     </div>
     <table>
@@ -116,3530 +119,5534 @@
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/fc5ebbfa-8cb9-4a29-819b-85c39bca1e49.html",
       "date": "2026-05-15",
       "district": "彭水",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "489万元"
+      }
     },
     {
       "title": "嘉陵湾区老旧小区改造配套基础设施项目(双碑堆金村服务设施补建）、双碑街道2024年老旧小区整治项目（二期）一标段工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/9c473f8e-94f5-48f9-b973-e2bc3509403f.html",
       "date": "2026-05-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1336万元"
+      }
     },
     {
       "title": "开州高新区胡桥园区智能装备制造产业园建设项目（配套服务用房）EPC总承包（重新发布）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/a6aed245-4cab-4168-8960-2df796202644.html",
       "date": "2026-05-15",
       "district": "高新区",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4500.00万元"
+      }
     },
     {
       "title": "开州高新区胡桥园区智能装备制造产业园建设项目（配套服务用房）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/bb25cb99-03dd-48f3-891d-5fb737727384.html",
       "date": "2026-05-15",
       "district": "高新区",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "100.51万元"
+      }
     },
     {
       "title": "开州区厚坝镇农村生活污水收集处理工程（勘察设计）（重新发布）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260515/42588d24-4192-4147-9414-bc085a965772.html",
       "date": "2026-05-15",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "151.76万元"
+      }
     },
     {
       "title": "城口县“高燕一巴山”全域土地综合整治项目（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260515/faf88a64-5560-4552-9f76-9c133e83ee99.html",
       "date": "2026-05-15",
       "district": "城口",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "7145.00万元"
+      }
     },
     {
       "title": "西部（重庆）科学城重大科学基础设施虎溪建设项目——科学中心实验室搬迁配合工程（储能平台工艺配套项目）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/a153972c-d77f-472d-a12d-81a02a5067a5.html",
       "date": "2026-05-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1205.00万元"
+      }
     },
     {
       "title": "中国赛宝（西部）汽车芯片检测基地实验室（洁净室）建设安装工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/7693d7ca-f909-472d-b20d-e268d3cc90df.html",
       "date": "2026-05-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3334600.24元"
+      }
     },
     {
       "title": "两江新区盘溪河溉澜溪片区污水管网整治工程设计（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260515/dfb69c9e-aed9-4f16-8d9b-9f37444a5aae.html",
       "date": "2026-05-15",
       "district": "两江新区",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "工程总投资",
+        "value": "13030.63万元"
+      }
     },
     {
       "title": "寸滩现代社区项目一期（暂定名）土石方工程施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/55b5f5ca-2704-4231-8df7-27c5c8186403.html",
       "date": "2026-05-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "390万元"
+      }
     },
     {
       "title": "重庆市潼南区提升农村饮水质量工程（潼南区农村供水保障工程）-二期工程监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260515/5a390b6c-140a-4236-9823-68e3c6923c24.html",
       "date": "2026-05-15",
       "district": "潼南",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "573652.80元"
+      }
     },
     {
       "title": "渝中半岛长江沿线流域雨水通道改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260515/fead37b3-3679-49e2-8242-a3654546a97a.html",
       "date": "2026-05-15",
       "district": "渝中",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约12215.6万元"
+      }
     },
     {
       "title": "云阳县宝坪至梅子滩段公路升级改造工程施工图设计阶段勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/105b3ffb-2354-4646-923e-85ea274a7e15.html",
       "date": "2026-05-15",
       "district": "云阳",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "最高限价",
+        "value": "940000.00元"
+      }
     },
     {
       "title": "重庆工商大学南岸校区2026年附属工程-标段四：不可预测的零星维修工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/99905b67-9472-487a-a654-1d4cbcb90db8.html",
       "date": "2026-05-15",
       "district": "南岸",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "360万元"
+      }
     },
     {
       "title": "重庆市九龙坡区城市老旧小区供水管网漏损治理及二次供水设施更新改造工程（二期）全阶段设计服务",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260515/97a7a866-f441-4cb2-be32-0eb00f979e67.html",
       "date": "2026-05-15",
       "district": "九龙坡",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "141.66万元"
+      }
     },
     {
       "title": "重庆市益康环保工程有限公司2026年度土建设施修缮服务项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/ed5f0f4b-8b8f-4a69-86f0-068bd35401f0.html",
       "date": "2026-05-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "400万元"
+      }
     },
     {
       "title": "九龙坡区2026年西部项目区小流域综合治理提质增效项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260515/1f2578a0-7f6a-4658-9df6-614598fd2a3d.html",
       "date": "2026-05-15",
       "district": "九龙坡",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1205.99万元"
+      }
     },
     {
       "title": "安居古镇后河街85号危房改造项目（剩余部分）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/2d8a2442-2736-4b5d-84b4-1a1420e86784.html",
       "date": "2026-05-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "三峡广场片区老旧街区转型提质工程-三峡广场便民服务设施",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/ce03f12f-141e-4a8b-9680-ac4f089f526d.html",
       "date": "2026-05-15",
       "district": "未明显标注",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1900万元"
+      }
     },
     {
       "title": "北碚区澄江镇美丽城镇建设项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260515/c8e39d5f-9e6e-4e36-8a0b-04f1e902b66b.html",
       "date": "2026-05-15",
       "district": "北碚",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "450.00万元"
+      }
     },
     {
       "title": "重庆工商大学南岸校区2026年附属工程—标段三：国际商学院综合楼改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/ff100f0c-6227-4ddf-8b36-1fe0cf659d97.html",
       "date": "2026-05-15",
       "district": "南岸",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "240万元"
+      }
     },
     {
       "title": "重庆工商大学南岸校区2026年附属工程—标段二：“商工融合”人才培养示范基地建设工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/0dc4e98c-9cdf-45a0-a135-cc3f975de291.html",
       "date": "2026-05-15",
       "district": "南岸",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "996万元"
+      }
     },
     {
       "title": "某部051、052、053栋集体宿舍楼综合整治工程监理项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/d30d3d01-8770-4120-aed5-22050fdd44df.html",
       "date": "2026-05-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（十标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260515/d900735c-46b3-422d-b0ca-bcf06adabd04.html",
       "date": "2026-05-15",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1434万元"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（九标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260515/dfa8e97d-718a-4e68-b4a7-9b278a0f7fb1.html",
       "date": "2026-05-15",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1383万元"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（八标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260515/6ad2f45d-f301-45c0-be9f-867bbcfa6995.html",
       "date": "2026-05-15",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约786万元"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（七标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260515/d3676c5a-11b6-4436-a5df-2962bfe53ef6.html",
       "date": "2026-05-15",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约809万元"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（六标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260515/576614bb-fd24-4a07-845b-372ecc4acf45.html",
       "date": "2026-05-15",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1462万元"
+      }
     },
     {
       "title": "合川区渝武高速草街下道口道路提升改造工程（设施设备安装）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260515/811b954d-1eff-45d0-94f0-a4831b0989c7.html",
       "date": "2026-05-15",
       "district": "合川",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "473.694451万元"
+      }
     },
     {
       "title": "中储粮重庆万州直属库有限公司仓储项目二期智能化控制系统采购及安装项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260514/976e9c21-f2a1-4f85-b25f-9065360fb74a.html",
       "date": "2026-05-14",
       "district": "万州",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "600.406657万元"
+      }
     },
     {
       "title": "云阳县水口大学城商业楼装饰装修项目EPC总承包",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260514/f794e9d1-b5a5-45ce-b792-c73d958cbb55.html",
       "date": "2026-05-14",
       "district": "云阳",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大平山巴渝韵动汇体育中心项目初步设计、施工图设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260514/54e39d84-cc5c-44d2-bfef-894aacddb7de.html",
       "date": "2026-05-14",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "373.625万元"
+      }
     },
     {
       "title": "綦江区易旱区域供水保障工程（一期）-桐桠村水厂管网延伸工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260514/6d670837-08f8-4a2d-9e40-35dfbdf107b3.html",
       "date": "2026-05-14",
       "district": "綦江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "915.39万元"
+      }
     },
     {
       "title": "长江流域垫江县桂溪河水质提升及生态修复项目EPC",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260514/ceff5135-84c9-4e10-b217-88ee3f6ed9ef.html",
       "date": "2026-05-14",
       "district": "垫江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3108.76万元"
+      }
     },
     {
       "title": "渡舟村城中村改造项目-泽京·铂宸配套道路工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260514/2db0722e-72ce-4dc3-9573-719e94cbd76a.html",
       "date": "2026-05-14",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约550.66万元"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（五标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260514/3090aaf9-fc24-4641-9b72-344736ecc3f5.html",
       "date": "2026-05-14",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（四标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260514/c725f1e2-fc14-48e9-908b-41de30a11c19.html",
       "date": "2026-05-14",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（三标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260514/28af6e14-47f8-4f56-b61a-a0caf6d202c5.html",
       "date": "2026-05-14",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（二标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260514/d2a089be-a020-4658-b314-bbd67d2e0123.html",
       "date": "2026-05-14",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市南川区水江水厂改扩建及管网延伸工程（水厂部分）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260514/b8b5480f-2aad-4540-80f2-da195bfbd7f7.html",
       "date": "2026-05-14",
       "district": "南川",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "9620716.05元"
+      }
     },
     {
       "title": "重庆三峡科技大学2026年附属工程—不可预测的零星维修工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260514/ed481549-6310-40c4-a56f-7a091f252b28.html",
       "date": "2026-05-14",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "300万元"
+      }
     },
     {
       "title": "秀山县妇幼保健院托育综合服务中心建设项目（室内装饰工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260514/323a5b11-5346-483c-b100-5647c880f39c.html",
       "date": "2026-05-14",
       "district": "秀山",
-      "type": "施工"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "553.403572万元"
+      }
     },
     {
       "title": "重庆北站北广场负二层停车场改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260514/751ca547-1d6e-49bb-b947-b5b173bdca24.html",
       "date": "2026-05-14",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "铜梁区东城街道迎春街片区老旧小区改造项目（剩余部分）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260514/fd49c61d-7c87-4615-80e3-a450d15be493.html",
       "date": "2026-05-14",
       "district": "铜梁",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "718.25万元"
+      }
     },
     {
       "title": "万盛经开区2026年关坝镇西大魔芋种植及加工项目（良繁基地）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260514/a812f6bd-d15a-4b8b-9390-e37e412d419d.html",
       "date": "2026-05-14",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "436.43万元"
+      }
     },
     {
       "title": "大足区2026年高标准农田建设项目（一标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260513/65e4c8d1-370f-4748-b999-c8080647a429.html",
       "date": "2026-05-13",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1508.46万元"
+      }
     },
     {
       "title": "游客中心配套设施项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260513/38471dd0-b27d-4284-b4ba-4bfaa313041c.html",
       "date": "2026-05-13",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约475万元"
+      }
     },
     {
       "title": "开州区渠口镇渠口、毛坪村2026年市级美丽移民村项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260513/8842785e-f67e-49f2-ac3b-93dc77654ab9.html",
       "date": "2026-05-13",
       "district": "开州",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "656.48万元"
+      }
     },
     {
       "title": "梁平区山洪灾害危险区新建现代化监测设施工程（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260513/941173f0-76da-46b7-b3ac-27330ec0c181.html",
       "date": "2026-05-13",
       "district": "梁平",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "767571.11元"
+      }
     },
     {
       "title": "两江新区唐家沱组团H标准分区H1-9-1地块项目一期主体工程施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260513/fe9cdd46-89a4-4b9c-8a48-f96f93905ea8.html",
       "date": "2026-05-13",
       "district": "两江新区",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "57000万元"
+      }
     },
     {
       "title": "涪陵区江北片区农村移民安置区饮水安全提升工程钢管采购项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260513/cd56d672-1527-44e8-9bf4-4e8a9f5947b7.html",
       "date": "2026-05-13",
       "district": "江北",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆乌江白马航电枢纽工程水轮机、发电机设备制造监造（第三次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260513/5d1f769d-9511-4f6f-b2fa-88d82c66121f.html",
       "date": "2026-05-13",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "152.7万元"
+      }
     },
     {
       "title": "重庆乌江白马航电枢纽工程金属结构设备制造监造及焊缝第三方抽检（第三次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260513/ee4c11ff-d49b-4c71-bbdf-8f6fd3209e20.html",
       "date": "2026-05-13",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "154.5万元"
+      }
     },
     {
       "title": "沙坪坝区石井坡片区老旧小区配套基础设施改造工程(一期)二标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260513/3f3298c3-5b81-460c-bffa-2dbcbcb2fe74.html",
       "date": "2026-05-13",
       "district": "沙坪坝",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1800万元"
+      }
     },
     {
       "title": "原比速汽车老旧厂区提质改造再利用项目—比速发动机厂区改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260513/3956aabe-eef5-4760-90e5-83be212e54f4.html",
       "date": "2026-05-13",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "庆铃厂厂区老旧生活区配套设施建设项目(快乐里社区、新村路36号至108号)二期EPC总承包",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260513/f410f7a0-281e-42f4-abae-83731eeae82e.html",
       "date": "2026-05-13",
       "district": "未明显标注",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4700万元"
+      }
     },
     {
       "title": "宝顶烟云慢行系统（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260513/34381f28-43d7-4b70-b470-931cf5c9d3f0.html",
       "date": "2026-05-13",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2500万元"
+      }
     },
     {
       "title": "重庆市铜梁区妇幼保健院托育中心建设项目(剩余工程)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260512/a87a55d7-eaa3-4e73-9f3a-ab5f258bc53a.html",
       "date": "2026-05-12",
       "district": "铜梁",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2217.67万元"
+      }
     },
     {
       "title": "石柱县云中花都片区交通安全提升项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260512/a31efac4-9621-479a-a639-5ad83ad58917.html",
       "date": "2026-05-12",
       "district": "石柱",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "50278881.12元"
+      }
     },
     {
       "title": "永川区中山路昌州小区1号-40号片区老旧小区及配套基础设施改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260512/d3d58a1d-fdb6-40f0-bc7d-9367de16790d.html",
       "date": "2026-05-12",
       "district": "永川",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "444.89万元"
+      }
     },
     {
       "title": "垫江县澄溪街道供水管网建设工程（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260512/a8f5fa29-d142-4553-92d0-968106ac4fdb.html",
       "date": "2026-05-12",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "8654785.34元"
+      }
     },
     {
       "title": "大洪湖支流万顺河流域重点水生态修复工程EPC总承包",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260512/dc83e8ed-2ee5-4816-967a-c46616da76b5.html",
       "date": "2026-05-12",
       "district": "未明显标注",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2496.14万元"
+      }
     },
     {
       "title": "长寿区桃兴路片区供排水一体化建设项目设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260512/81b8bef3-0cbf-4645-a0ae-5cff3ffaf276.html",
       "date": "2026-05-12",
       "district": "长寿",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "长寿区“四好农村路”云集镇华飞路项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260512/b6c5791d-8789-49ba-97b4-193d594c62bd.html",
       "date": "2026-05-12",
       "district": "长寿",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1062.01万元"
+      }
     },
     {
       "title": "悦峰众联集体经济农作物加工项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260512/40807d4c-9989-4c41-ad6a-2ff13ae51bcb.html",
       "date": "2026-05-12",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "工程总投资",
+        "value": "1200万元"
+      }
     },
     {
       "title": "永川区2025年三教镇高标准农田建设项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260512/698f34a2-e465-4f0c-9683-0c2e50661667.html",
       "date": "2026-05-12",
       "district": "永川",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1224.08万元"
+      }
     },
     {
       "title": "重庆市跳蹬水库枢纽闸门、拦污栅制作及安装工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260512/d8e54601-ef21-4ccb-87de-b6ee4cf01244.html",
       "date": "2026-05-12",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1880.15万元"
+      }
     },
     {
       "title": "交通路1084、1086号城市危旧房改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260512/6343fd0f-6391-4a6c-b942-7357ae23e318.html",
       "date": "2026-05-12",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市万州区甘宁镇新丰岩盐勘查项目ZK0102探井钻井工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260512/aa8685c7-b86a-4c00-a3e6-312fd14c10a5.html",
       "date": "2026-05-12",
       "district": "万州",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "巴南区道角机床厂片区城市更新项目（二批次）设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260512/fd8658fb-6cf9-40a6-9952-c57a1c785a8f.html",
       "date": "2026-05-12",
       "district": "巴南",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约95.799959万元"
+      }
     },
     {
       "title": "重庆医科大学附属儿童医院渝中院区病房改造提升工程医用气体项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260512/3c8a1380-209d-4056-a3a9-5d24cf471809.html",
       "date": "2026-05-12",
       "district": "渝中",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "700万元"
+      }
     },
     {
       "title": "垫江县坪山镇登陵等2个村农村公路建设工程（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260512/eaa068f3-bde9-4a66-9324-e28b993ad7c5.html",
       "date": "2026-05-12",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3352956.00元"
+      }
     },
     {
       "title": "彭水自治县农村规模化供水项目-高谷水厂工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260511/d9b7f73b-296f-4151-acbd-4c73f5743fd4.html",
       "date": "2026-05-11",
       "district": "彭水",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约110.00万元"
+      }
     },
     {
       "title": "涪陵区2025年新妙镇等9个镇耕地补充（种业提升）项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260511/18ec1770-9bb6-45a6-9638-5a4875800a46.html",
       "date": "2026-05-11",
       "district": "涪陵",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约750万元"
+      }
     },
     {
       "title": "保安公司物业板块绿化临时劳务用工服务采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260511/f0258b48-af42-4170-9196-377fd99ed3ed.html",
       "date": "2026-05-11",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆工商大学南岸校区2026年附属工程—标段一：南岸校区南区部分学生公寓维修改造",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260511/d2ecdd8c-5dd7-423d-8703-91e06c47703a.html",
       "date": "2026-05-11",
       "district": "南岸",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1115万元"
+      }
     },
     {
       "title": "重庆市开州区2026年雪宝山镇百年林下野放茶产业升级项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260511/ac008c5d-b183-4103-a332-977bbea20c0a.html",
       "date": "2026-05-11",
       "district": "开州",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1346.83万元"
+      }
     },
     {
       "title": "成渝双城经济圈川渝高竹新区污水处理厂建设项目-污水处理厂及四川广安川渝合作高滩园区生态污水处理厂项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260511/fe738338-3bdf-40e1-a6a6-fd09973dbcf6.html",
       "date": "2026-05-11",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "24467.085038万元"
+      }
     },
     {
       "title": "渝开发南樾天宸项目三期（A70地块二期）一组团（一、二批次）园林景观工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260511/e839e95b-90c8-44ab-8ea9-922e70a1b511.html",
       "date": "2026-05-11",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "655万元"
+      }
     },
     {
       "title": "酉阳县运输设施提升改造项目南站改造项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260511/31d9501d-a959-48f5-9025-b88b4dd1555d.html",
       "date": "2026-05-11",
       "district": "酉阳",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1593.12万元"
+      }
     },
     {
       "title": "2026年嘉平镇农村公路建设项目（窑打路加宽工程）（AA202600451）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260511/198fc1e4-5831-4cc1-94aa-702bda8814ed.html",
       "date": "2026-05-11",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "243.7395万元"
+      }
     },
     {
       "title": "重庆工商大学茶园校区2026年附属工程-标段二：茶园校区四学院两中心电力改造",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260511/9c2315fb-02b2-45ed-9f8e-2f274ba6c187.html",
       "date": "2026-05-11",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "300万元"
+      }
     },
     {
       "title": "重庆高速公路集团有限公司中渝营运分公司2026年桥梁病害处冶工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260511/67ff2faf-9567-4fbf-b180-34e04eccbd3c.html",
       "date": "2026-05-11",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约700万元"
+      }
     },
     {
       "title": "大足区龙岗街道2026年老旧小区主体改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260511/6c75f106-1c24-49e0-9a30-99b068594cf8.html",
       "date": "2026-05-11",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4927339.7元"
+      }
     },
     {
       "title": "忠县移民乡镇及安置区农村饮水质量提升工程（一期)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260509/f2bac140-3421-4200-bbf3-3e4a25930f27.html",
       "date": "2026-05-09",
       "district": "忠县",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约2700万"
+      }
     },
     {
       "title": "重庆三峡科技大学2026年附属工程——日常维修改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/46a5bfab-071a-4cc7-a2f0-c0fe553f3764.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "沙坪坝区上新片区市政燃气管线及配套设施更新改造工程、沙坪坝区天星桥片区市政燃气管线及配套设施更新改造工程、沙坪坝区丰文、青木关、凤凰片区小区燃气管道及设施更新改造工程设备（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/163a4436-10ad-4907-a66e-46fc334cdaa1.html",
       "date": "2026-05-09",
       "district": "沙坪坝",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "两江新区人和、天宫殿片区污水管网更新改造工程施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/ea32e92f-65d7-4a8e-a592-95f91cb48f04.html",
       "date": "2026-05-09",
       "district": "两江新区",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "87537154.63元"
+      }
     },
     {
       "title": "水土新城污水管网系统整治工程施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/8a5824d8-ad14-4f77-9039-01ac8faf1d2d.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "73824279.43元"
+      }
     },
     {
       "title": "黔江磁材料-车载电源产业园（一期配套基础设施建设项目）勘察",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/cbe1aa6c-010a-4311-a9d8-533d9fea448a.html",
       "date": "2026-05-09",
       "district": "黔江",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "彭水县汉葭街道浅水湾片区老旧小区改造及配套基础设施建设项目（设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/2a48c34f-e55b-4017-9c3f-c4c5482436b2.html",
       "date": "2026-05-09",
       "district": "彭水",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "209.11125万元"
+      }
     },
     {
       "title": "荣昌区北部片区中心水厂建设工程（管网部分）（第三次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/bbb4f68e-60da-45d0-a315-427244b62728.html",
       "date": "2026-05-09",
       "district": "荣昌",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "安陶小镇陶宝巷子重庆市荣昌区安富街道全域土地综合整治项目-安富街道陶宝巷子环境综合治理项目(陶宝巷子一期剩余部分)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/138eb028-753a-4c37-a29c-091564dd7011.html",
       "date": "2026-05-09",
       "district": "荣昌",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "鱼复新城污水管网整治工程（一期）施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/f5507bf8-f932-46f9-bf78-b67c1a9f8b8f.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "7489.492133万元"
+      }
     },
     {
       "title": "保税港区空港老旧管网更新改造建设项目施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/d68830a4-ade3-41fd-9dce-0c45c8b378b1.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "垫江县曹回镇安山村、乐安村2026年度市级美丽移民村建设项目-钢结构专业分包竞争性比选公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/da7a6860-9daa-4f4e-a27a-f1652a4b760b.html",
       "date": "2026-05-09",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1476594.09元"
+      }
     },
     {
       "title": "垫江县农村水环境及供水设施保障能力提升工程--新建沙坪-周嘉供水管道工程专业分包",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/d804e461-968f-47e9-8eaa-0b7ad388a402.html",
       "date": "2026-05-09",
       "district": "垫江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约6151561.78元"
+      }
     },
     {
       "title": "奉节县白帝城景区应急通道蓄退水影响库岸坍塌修复工程勘查设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260509/85b00a23-eaba-42f7-965b-0de025a32020.html",
       "date": "2026-05-09",
       "district": "奉节",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县红狮镇咏梧社区红色美丽村庄建设（三标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/4df7dc5d-9f49-48f4-8460-de0567ddeeed.html",
       "date": "2026-05-09",
       "district": "云阳",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "青凤科创城数智化微电网低碳园区项目（分布式光伏及储能工程一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/63281dcd-d98a-42f3-b22d-458d7e656f53.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4622.80万元"
+      }
     },
     {
       "title": "成渝双城经济圈川渝高竹新区绿色低碳智能制造中心建设项目—标准化厂房三期工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/72f77f71-f2fd-417b-96a5-8c07df6cc233.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "181266120.54元"
+      }
     },
     {
       "title": "西部（重庆）科学城九龙坡片区城乡融合发展项目—黄磏临港产业服务城配套停车场工程（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/a47fc913-9379-4d31-b500-86a18f00dbbf.html",
       "date": "2026-05-09",
       "district": "九龙坡",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市璧山区城市社区嵌入式服务综合体项目（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/23011ea2-2f77-4d2c-814f-536800fde789.html",
       "date": "2026-05-09",
       "district": "璧山",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约700万元"
+      }
     },
     {
       "title": "重庆市云阳县2022-2023年度封山育林异地置换项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260509/204528e3-8aee-477b-9b82-2dbec2d7af5f.html",
       "date": "2026-05-09",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "5848061.75元"
+      }
     },
     {
       "title": "云阳县第五中学建设项目云阳县第五初级中学-家具采购及安装",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/58e83549-57c7-45ba-89c7-bb843a7f8a82.html",
       "date": "2026-05-09",
       "district": "云阳",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "开州至云阳高速(江口-云阳-龙缸段)复兴长江大桥照明工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/b31c7421-0e46-46fb-a296-92141fbcc4ba.html",
       "date": "2026-05-09",
       "district": "开州",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "27181891.00元"
+      }
     },
     {
       "title": "合川区2025年-2026年高标准农田建设项目(燕窝、龙凤、太和片区)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260509/bf9f317f-b3e6-444c-82cb-4cb2e0429e4f.html",
       "date": "2026-05-09",
       "district": "合川",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆零部件基地改造项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/e699a046-23af-47c6-92e8-4d0d468d004e.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1900万元"
+      }
     },
     {
       "title": "重庆市丰都县农村生活污水深化治理项目(一期)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/a499a504-ca8d-4586-870d-076c6511f9d0.html",
       "date": "2026-05-09",
       "district": "丰都",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大渡口区城市老旧小区供水管网更新改造工程设备采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/92560c43-b83c-4419-ad41-6de3df32ed26.html",
       "date": "2026-05-09",
       "district": "大渡口",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "2026年-2028年日常土建维修及零星改造",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/c8847bbd-7f26-4bc0-95ea-31244044d41c.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "500万"
+      }
     },
     {
       "title": "铜梁区平滩镇高平村、四方村产业发展基础设施建设项目（果汁原浆生产线）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260509/671f9f98-c79f-45b3-ae06-17baf5afef7f.html",
       "date": "2026-05-09",
       "district": "铜梁",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "钓鱼城街道三唐路安全能力提升工程（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/7a4d3fb3-a1e6-4023-9cf7-d8f65168acb9.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "开州高新区胡桥园区智能装备制造产业园建设项目（配套服务用房）EPC总承包",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/741ec7a9-cd35-4496-b10c-e64a1e9d72e5.html",
       "date": "2026-05-09",
       "district": "高新区",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4500.00万元"
+      }
     },
     {
       "title": "重庆城市职业学院新校区建设一期工程二标段施工图设计及预算编制",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260509/e232ebb5-37bb-4711-8cd1-f99f07080d4a.html",
       "date": "2026-05-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "万盛生活垃圾填埋场渗滤液全量化处置设备更新项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260509/0d9846d9-df85-421e-bb28-73f9423c74d2.html",
       "date": "2026-05-08",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2698.11万元"
+      }
     },
     {
       "title": "开州区厚坝镇农村生活污水收集处理工程（勘察设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260508/90db27d0-d09c-4dac-9ecf-57eeeef0357a.html",
       "date": "2026-05-08",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "151.76万元"
+      }
     },
     {
       "title": "开州区白鹤等乡镇农村生活污水收集处理工程（勘察设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260508/20ac4a9e-0ca1-443a-908a-ff5cb16381d2.html",
       "date": "2026-05-08",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "178.38万元"
+      }
     },
     {
       "title": "垫江县老城片区防洪排涝通道项目、垫江县东门片区迎春河封盖河道恢复排涝通道建设工程EPC（垫江县丹桂街市场建设项目分布式光伏项目专业分包）（第三次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/3af9c32c-481b-4aeb-bb0f-873e84a6e7ab.html",
       "date": "2026-05-08",
       "district": "垫江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1338715.64元"
+      }
     },
     {
       "title": "垫江县坪山镇新风等7个村农村公路建设工程（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/674e36a1-4018-4094-9214-af0f6f1c03e5.html",
       "date": "2026-05-08",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3478040.00元"
+      }
     },
     {
       "title": "双桂堂部分建筑保护修缮工程（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/928a7329-3f44-4508-880c-55dffab1ec9a.html",
       "date": "2026-05-08",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市两江巴蜀嘉和小学EPC总承包工程智能化监控设备采购（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/4c81040a-7d7a-4065-a1ba-da25686b3c22.html",
       "date": "2026-05-08",
       "district": "未明显标注",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "166号建筑物及室外工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/3eae0e20-86d8-40ba-89c5-bb66e5fae863.html",
       "date": "2026-05-08",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "綦江区易旱区域供水保障工程（二期）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260508/924f3997-4785-42da-97bb-56abd8edaee7.html",
       "date": "2026-05-08",
       "district": "綦江",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约173.35万元"
+      }
     },
     {
       "title": "綦江区易旱区域供水保障工程（一期）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260508/95c6051a-d6ae-4114-939e-aa1078278ed0.html",
       "date": "2026-05-08",
       "district": "綦江",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约170.75万元"
+      }
     },
     {
       "title": "丰都县虎威镇胡家沱危岩带勘查项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260508/b95f14f6-8f1e-4eb8-abb3-0eedaa066bb4.html",
       "date": "2026-05-08",
       "district": "丰都",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "潼南中学金福校区建设工程（弱电智能化）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/23a0a4b7-20df-43df-92b6-b532065e74d0.html",
       "date": "2026-05-08",
       "district": "潼南",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1987.11万元"
+      }
     },
     {
       "title": "国家级中药材产业融合集群创建项目（二期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260508/6c641c75-18be-48c3-9cdf-2dc30da0635b.html",
       "date": "2026-05-08",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "北碚区大高路路面改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/58bb1f38-1076-4da9-b4b2-04af1f4bddef.html",
       "date": "2026-05-08",
       "district": "北碚",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1259.0423万元"
+      }
     },
     {
       "title": "2024年铜梁区普通公路通行安全综合修复工程（渝遂路）（少高路口至高楼盘石村段）和2024年铜梁区普通公路通行安全综合修复工程（渝遂路）（高楼盘石村至园山2社新桥段）（第一次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/70d344f3-b852-491f-810b-e46de5648a9b.html",
       "date": "2026-05-08",
       "district": "铜梁",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "黔江区城南街道青杠社区卫生服务站医养结合项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/ec52b830-4210-4663-9902-3066207e5e24.html",
       "date": "2026-05-08",
       "district": "黔江",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "西部（重庆）科学城科技创新产业园二期建设项目-仁康路工程、同语路工程、森语路工程（一标段）、仁盛路工程（一标段）、林熙路工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260508/a07e0c7b-075b-4e89-83e8-c191b9e74175.html",
       "date": "2026-05-08",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆工信职业学院第二食堂及七号学生公寓楼项目全过程咨询服务",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260508/ed3e780f-aec0-4a0e-b47f-23f1930a668a.html",
       "date": "2026-05-08",
       "district": "未明显标注",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆长寿生产服务型国家物流枢纽液体货物铁路分拨中心",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260507/3b4c6b09-4386-48a0-b7b5-aedc200642fe.html",
       "date": "2026-05-07",
       "district": "长寿",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "69605690.56元"
+      }
     },
     {
       "title": "智慧停车综合管理平台系统道闸设备项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260507/90d25f16-ba45-4b08-b9db-0a2bd8d63a04.html",
       "date": "2026-05-07",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "彭水自治县农村规模化供水项目-长滩供水管网工程、梅子垭供水管网工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/4604a81e-f9b9-4c15-bc7c-32a8b6ce9a46.html",
       "date": "2026-05-07",
       "district": "彭水",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "78.4万元"
+      }
     },
     {
       "title": "彭水自治县农村规模化供水项目-走马供水管网工程、黑洞河水厂工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/63d051df-706b-42c6-bc66-d743691cbc9d.html",
       "date": "2026-05-07",
       "district": "彭水",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "77.79万元"
+      }
     },
     {
       "title": "重庆市垫江中学校高中部改扩建工程（一期：校园环境文化提升工程之文化创意）货物采购及安装",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260507/ef56d8b3-8f6b-419b-911b-bd97d8bcb5a5.html",
       "date": "2026-05-07",
       "district": "垫江",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市垫江中学校高中部改扩建工程（弱电线路改造工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260507/b1dcfd79-adee-4c89-b36f-a8cf2f04ba71.html",
       "date": "2026-05-07",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "145万元"
+      }
     },
     {
       "title": "荣昌区河包镇粉条生产加工区A区项目(A9地块及附属)-供配电工程（第三次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260507/75fcfc2f-d5b3-431e-874e-a94b05a51fd8.html",
       "date": "2026-05-07",
       "district": "荣昌",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3592042.61元"
+      }
     },
     {
       "title": "綦江区工业园区（北渡、桥河）供水工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260507/f1f43bd5-6252-4d5b-b8df-2ec6f87fa5d3.html",
       "date": "2026-05-07",
       "district": "綦江",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "238.20万元"
+      }
     },
     {
       "title": "綦江扶欢片区污水处理配套管网工程（二期）设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/d2a21f06-e4d1-40fc-9c08-08a0d16263ae.html",
       "date": "2026-05-07",
       "district": "綦江",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "98.5万元"
+      }
     },
     {
       "title": "云阳县生活垃圾分类转运设备更新项目（压缩式垃圾车、自卸车等采购）一标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260507/1b323615-aed4-4f9c-9bb2-f8b2566ad430.html",
       "date": "2026-05-07",
       "district": "云阳",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县生活垃圾分类转运设备更新项目（压缩式垃圾车、自卸车等采购）二标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260507/b60b1e3d-5a40-4962-84e1-a7e5be7a24ad.html",
       "date": "2026-05-07",
       "district": "云阳",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县生活垃圾分类转运设备更新项目（压缩式垃圾车、自卸车等采购）四标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260507/e38e8aba-072b-4e9e-a18b-24b48b4f30ce.html",
       "date": "2026-05-07",
       "district": "云阳",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县生活垃圾分类转运设备更新项目（压缩式垃圾车、自卸车等采购）五标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260507/06241a65-4a28-4923-9e25-5304a1e56c99.html",
       "date": "2026-05-07",
       "district": "云阳",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县生活垃圾分类转运设备更新项目（压缩式垃圾车、自卸车等采购）六标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260507/32ffedb2-d93f-4027-b60f-7f3b686ce2b8.html",
       "date": "2026-05-07",
       "district": "云阳",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县生活垃圾分类转运设备更新项目（压缩式垃圾车、自卸车等采购）三标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260507/89283b44-2540-4d8d-9182-000496d161b6.html",
       "date": "2026-05-07",
       "district": "云阳",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "渝北区木耳等6片区污水管网更新改造工程第三方咨询（含施工阶段工程造价全过程控制）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/94548af8-f5b9-4b59-904c-f64838ae662a.html",
       "date": "2026-05-07",
       "district": "渝北",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市第六十六中学校改扩建工程设计（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260507/0c9772b2-2fab-4260-b300-fc08ddc2f9f9.html",
       "date": "2026-05-07",
       "district": "未明显标注",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "144.42万元"
+      }
     },
     {
       "title": "万盛城区老旧供水管网更新改造工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/b326c935-8adc-4099-9d83-8e315383652a.html",
       "date": "2026-05-07",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "383.41万元"
+      }
     },
     {
       "title": "巫山县江东片区城市体育公园建设项目勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/d25555b5-482a-4d19-9571-3d66d0149e0a.html",
       "date": "2026-05-07",
       "district": "巫山",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "陶家污水处理厂前端截污干管修复工程第三方咨询（含施工阶段工程造价全过程控制）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/226281db-8988-4bbe-a613-07150003114b.html",
       "date": "2026-05-07",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "渝北区石船等6片区污水管网更新改造工程第三方咨询（含施工阶段工程造价全过程控制）（重新招标）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/a6b85641-a194-4f40-9acd-4c447b2f8825.html",
       "date": "2026-05-07",
       "district": "渝北",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "平滩河流域（城区河段）污水管网更新改造工程第三方咨询（含施工阶段工程造价全过程控制）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/80236918-150a-4034-9756-47b0dd76cbb7.html",
       "date": "2026-05-07",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "南岸区沿江污水老旧管网更新改造（NP6-NP19、NB1-NB2分区）项目第三方咨询（含施工阶段工程造价全过程控制）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/c1afb3c2-448f-4b4e-93dd-93210f385fac.html",
       "date": "2026-05-07",
       "district": "南岸",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "华岩中梁山片区污水管网更新改造工程第三方咨询（含施工阶段工程造价全过程控制）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/c2a04f59-1882-4780-a966-bb50c4667858.html",
       "date": "2026-05-07",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "南岸区公共安全管理能力建设项目（一标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260507/ab840a7d-a2f7-4721-b3a1-966741f8ecf4.html",
       "date": "2026-05-07",
       "district": "南岸",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "长寿区城区阳鹤山片区排涝调蓄设施项目（四标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260507/c98a8247-8dc6-4436-9616-50c90af2716b.html",
       "date": "2026-05-07",
       "district": "长寿",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1700.81万元"
+      }
     },
     {
       "title": "某部2025年油库整修改造工程施工项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260507/b499d734-dcff-49fa-a6e1-4899397943e8.html",
       "date": "2026-05-07",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "某部051、052、053栋集体宿舍楼综合整治",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260507/07893dae-92f3-4e33-8829-84880533a944.html",
       "date": "2026-05-07",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大安通航产业制造基地配套工程一期",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260506/7865af82-a96e-409d-842f-14b3c068c36a.html",
       "date": "2026-05-06",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "7579.57万元"
+      }
     },
     {
       "title": "荣昌区吴家镇西河片区老旧小区配套基础设施建设工程（重新招标）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260506/8ae2ee8d-5852-480d-9351-2f76e34dddc5.html",
       "date": "2026-05-06",
       "district": "荣昌",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "721.51万元"
+      }
     },
     {
       "title": "彭水自治县农村规模化供水项目-堡上水厂工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260506/ede49ff3-724d-4c38-8b99-ea2e991a2219.html",
       "date": "2026-05-06",
       "district": "彭水",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "秀山县官湖片区雨污水管网整治工程(二期)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260506/7d44b0cd-56cd-4ec2-8cb7-0c4de2efa986.html",
       "date": "2026-05-06",
       "district": "秀山",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1100万元"
+      }
     },
     {
       "title": "重庆市涪陵区公共实训基地项目电梯采购及安装工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260506/91b6c96a-2c6c-4f52-9194-85eb5e4f3aa2.html",
       "date": "2026-05-06",
       "district": "涪陵",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "四川美术学院2026年零星维修服务",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260506/a25e24fe-f017-4e44-881e-15cb018fdcbb.html",
       "date": "2026-05-06",
       "district": "未明显标注",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "秀山县省道S526龙池至峨溶段公路改建工程（峨溶过境路）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260506/13fbf65a-7ef7-4eaa-9b2e-8037a00a0c0e.html",
       "date": "2026-05-06",
       "district": "秀山",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "736.63万元"
+      }
     },
     {
       "title": "重庆市跳蹬水库工程全过程跟踪审计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260506/b54c67ff-ef89-4cdc-89a3-887507341e5d.html",
       "date": "2026-05-06",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约99万元"
+      }
     },
     {
       "title": "广安市川渝高竹新区高滩片区城中村改造项目、广安市川渝高竹新区高滩片区城中村改造项目（二期）及川渝高竹新区安置房建设项目（一期）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260506/6c3a1afa-f4a7-47c2-84ab-e9f3906277c2.html",
       "date": "2026-05-06",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "424.14万元"
+      }
     },
     {
       "title": "川渝高竹新区高效无稀土节能电机及智能机器人应用中试平台建设项目（一期）设备采购（二标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260506/b6ce0b5c-4c21-4e73-af5a-698ae35d36f4.html",
       "date": "2026-05-06",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "秀山县地友水库复建公路工程（田家院组至火木湾组）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260506/29f97d37-1446-4373-8976-2c7d36941f37.html",
       "date": "2026-05-06",
       "district": "秀山",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2453920.00元"
+      }
     },
     {
       "title": "重庆索特盐化热电汽轮机组设备采购（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260506/4418ed0c-9f34-4776-9734-985103f8cf8f.html",
       "date": "2026-05-06",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "三江老旧城区市政管网改造更新项目 （一标段四钢片区）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260501/a7f4ff2f-19d2-4650-9866-ea014c0d3b24.html",
       "date": "2026-05-01",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "780.04万元"
+      }
     },
     {
       "title": "万州区2026年超长期特别国债高标准农田建设项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/efc17504-a4ca-421f-928e-df9f8aa1398e.html",
       "date": "2026-04-30",
       "district": "万州",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约13711.28万元"
+      }
     },
     {
       "title": "万州区2026年超长期特别国债高标准农田建设项目监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/4e3f4c04-5f02-45de-9fae-6e14d906ba63.html",
       "date": "2026-04-30",
       "district": "万州",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "202.93万元"
+      }
     },
     {
       "title": "2025年綦江区地灾综合整治项目一标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/e0a56828-bbe9-4546-b274-1ab9a18232df.html",
       "date": "2026-04-30",
       "district": "綦江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "2025年綦江区地灾综合整治项目二标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/a4c29080-9451-4348-95c3-7f44dfd32076.html",
       "date": "2026-04-30",
       "district": "綦江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "巫溪县先锋小学校食堂项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/3d265b4c-8b01-48eb-9c05-4a9733c8eb87.html",
       "date": "2026-04-30",
       "district": "巫溪",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "518.79万元"
+      }
     },
     {
       "title": "“616”项目一期工程和重庆市梁平区公共实训基地建设项目勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/07749add-5a1e-4cd8-81dc-2ad529945071.html",
       "date": "2026-04-30",
       "district": "梁平",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约879万元"
+      }
     },
     {
       "title": "重庆市綦江区G353线北渡～永新镇段（K2186+180～K2201+470）、永新镇～中峰镇段（K2201+865～K2202+610）、中峰镇～江津区段（K2203+108～K2217+690）公路地质灾害防治工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/73a7efa1-154a-4397-b0c5-80b0379acce2.html",
       "date": "2026-04-30",
       "district": "江津",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "82007034元"
+      }
     },
     {
       "title": "奉节县长安乡安全出行通道提升工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/d3e16c99-cf68-4c25-b504-7c080c4f7897.html",
       "date": "2026-04-30",
       "district": "奉节",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "8283.2924万元"
+      }
     },
     {
       "title": "綦江北渡片区配套管网工程（二期）设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/36f64ee8-d506-492a-9654-7d3666935a45.html",
       "date": "2026-04-30",
       "district": "江北",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "108万元"
+      }
     },
     {
       "title": "荣昌区石河村城中村改造基础设施配套项目（二期）和荣昌区再生水利用配置试点项目（二期）（仰山庙水库管理道路双城路及综合管廊、荣昌区科创中心片区配套输水管网工程-南北一干线）监理荣昌区石河村城中村改造基础设施配套项目（二期）和荣昌区再生水利用配置试点项目（二期） （仰山庙水库管理道路双城路及综合管廊、荣昌区科创中心片区配套输水管网工程-南北一干线）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/22227d49-b3d5-492b-8d3a-9c85eb7c46c0.html",
       "date": "2026-04-30",
       "district": "荣昌",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "工程总投资",
+        "value": "19378.44万元"
+      }
     },
     {
       "title": "荣昌区石河村城中村改造基础设施配套项目(三期)勘察、初设、施工图设计（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/67297121-9ae3-41d2-a11c-887f72b676e0.html",
       "date": "2026-04-30",
       "district": "荣昌",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "南川区残疾人康复服务中心项目设计施工总承包（EPC）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/8677fe32-65b9-491d-bc42-f8c98f1a1ca0.html",
       "date": "2026-04-30",
       "district": "南川",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4861.86万元"
+      }
     },
     {
       "title": "黔江区珍珠兰厂新装用电工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/a5a45a9f-775c-4e08-ae52-4a012a43a8af.html",
       "date": "2026-04-30",
       "district": "黔江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "丰都县高家镇石龙村农村土地综合整治项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/1ac943c3-5fb2-412c-b36d-6030dea13184.html",
       "date": "2026-04-30",
       "district": "丰都",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约700万元"
+      }
     },
     {
       "title": "丰都县高家镇方斗山村农村土地综合整治项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/76a45e7d-1333-4766-8d98-65025e6df0de.html",
       "date": "2026-04-30",
       "district": "丰都",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约443.59万元"
+      }
     },
     {
       "title": "丰都名山景区旅游索道升级改造项目EPC总承包",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/836586e4-ccb5-40c9-b550-9bf2b81046d9.html",
       "date": "2026-04-30",
       "district": "丰都",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3643.11万元"
+      }
     },
     {
       "title": "重庆文理学院2026附属工程项目（子项二）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/d88b6bcd-fea8-4ebf-9847-ba84600cb2ff.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "巫山脆李深加工建设项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/7fae92d2-d3d7-440f-add1-e92a6e81e61f.html",
       "date": "2026-04-30",
       "district": "巫山",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "9062.82万元"
+      }
     },
     {
       "title": "重庆文理学院2026年附属工程项目（子项一 ）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/9a7902d8-05e0-489e-932c-648e0c8abe43.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "908264.59元"
+      }
     },
     {
       "title": "凤栖人才住房（二期）项目精装修（一批次）（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/8305df10-3eb3-4429-af06-ce205efd0435.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "957万元"
+      }
     },
     {
       "title": "高新区西永组团O分区O20地块项目（O20-2／01地块二期）全阶段设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/eec78db2-8f7e-4a5e-b299-f43d3d800fa8.html",
       "date": "2026-04-30",
       "district": "高新区",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "567.5万元"
+      }
     },
     {
       "title": "重庆大足高新区万古组团11-12#地块土地整治工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/8332052b-958d-4ad0-be31-31c153b3d0a5.html",
       "date": "2026-04-30",
       "district": "高新区",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约739万元"
+      }
     },
     {
       "title": "万州区罗田镇阳坪村市级农村土地整治项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/1ca8564c-a9bd-443b-bca3-05befd132294.html",
       "date": "2026-04-30",
       "district": "万州",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约924.99万元"
+      }
     },
     {
       "title": "垫江县迎春河保合寺传统风貌更新EPC项目酒店家具采购及安装",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/48bb76bc-1949-4391-8846-f98c4dec5a06.html",
       "date": "2026-04-30",
       "district": "垫江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4977399.88元"
+      }
     },
     {
       "title": "黔江区生态环境局屋顶分布式光伏发电项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/6db6c06b-507a-4627-9955-66a1e20da4d3.html",
       "date": "2026-04-30",
       "district": "黔江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "北碚区环缙云山生态建设及生态产业化EOD项目（一期）科学自然里子项目（工业及生态治理部分）EPC+O（产业导入）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/b988bde7-b42e-4a1e-81ad-c4146782fd34.html",
       "date": "2026-04-30",
       "district": "北碚",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区城镇燃气管网更新改造工程（二期）二标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/4597dbf6-919e-497a-bff8-9510dfbafe2b.html",
       "date": "2026-04-30",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2982.70万元"
+      }
     },
     {
       "title": "人和片区装修改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/ebdf2ecd-cc06-494a-bbac-adee281ab9a6.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "江津区津北片区农村主供水管网完善保障工程勘察设计（项目编号：AA202600431）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/682f9418-292a-48d9-870a-183f7245a8ec.html",
       "date": "2026-04-30",
       "district": "江津",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "339万元"
+      }
     },
     {
       "title": "秀山滨江体育公园项目 -一组团北区",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/615730a9-c519-4dd1-8fc3-971ed6df362a.html",
       "date": "2026-04-30",
       "district": "秀山",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约650万元"
+      }
     },
     {
       "title": "涪陵区青羊镇2025年度安镇村传统村落保护发展（安全隐患整治）项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/40235ffd-1445-40ca-b21a-367746ac2980.html",
       "date": "2026-04-30",
       "district": "涪陵",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约600万元"
+      }
     },
     {
       "title": "复兴街道搬运社片区城市危旧房改造配套基础设施项目(二期)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/f3a1a9eb-78a3-409d-b988-50fb4aaacd6d.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "垫江县坪山镇登陵等2个村农村公路建设工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/4fd8c306-af55-45e1-8422-9823e41c514e.html",
       "date": "2026-04-30",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3352956.00元"
+      }
     },
     {
       "title": "重庆市荣军优抚医院石坪桥院区改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/6e322339-995e-4857-baa5-e47e9ff60442.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "7776477.09元"
+      }
     },
     {
       "title": "天安数码城及周边城市更新勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/379d6d6b-56c7-411d-9c13-2939163524b7.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约373.00万元"
+      }
     },
     {
       "title": "城市道路管护服务项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/1e684d8e-d27b-47c3-bbf1-699254d2a007.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "秀山县梅江河沿岸排水管道更新改造工程（一标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/7df4c2d4-23ff-4433-a72e-fda75332a649.html",
       "date": "2026-04-30",
       "district": "秀山",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约495万元"
+      }
     },
     {
       "title": "武隆区黄莺乡龙洞水厂工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/baec2699-f1e8-44a9-8f3d-ca8851d823fa.html",
       "date": "2026-04-30",
       "district": "武隆",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "5019103.67元"
+      }
     },
     {
       "title": "武隆区芙蓉街道白杨村集中供水工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/2add7597-6af6-4dfa-aa38-403b06ff3fa0.html",
       "date": "2026-04-30",
       "district": "武隆",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "7008668.77元"
+      }
     },
     {
       "title": "前卫江畔南侧道路工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/95f22037-ebda-4bf6-9fb7-040f77aae101.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1482.19万元"
+      }
     },
     {
       "title": "武隆区土地乡桂花水厂工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/5ff3b148-d85c-485c-9870-6bcd5359e035.html",
       "date": "2026-04-30",
       "district": "武隆",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "178.72万元"
+      }
     },
     {
       "title": "武隆区供水系统品质提升项目（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/593780b9-966b-4089-97f7-cd92e39f57e5.html",
       "date": "2026-04-30",
       "district": "武隆",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "渝北区2026年新乡小流域综合治理提质增效项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/cf490775-1854-445c-9a2c-e6f2f475ef2d.html",
       "date": "2026-04-30",
       "district": "渝北",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1368万元"
+      }
     },
     {
       "title": "山王坪喀斯特国家生态公园提质改造项目监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/f7762821-ec49-4e92-8a27-a635e3a2b6a1.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "1771012.60元"
+      }
     },
     {
       "title": "重庆天原化工有限公司2026年发泡剂及其配套装置拆除项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/edcacb9a-954a-4828-896d-8bfa0ad9f968.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "南岸区排涝通道更新改造工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/b599d446-de3a-4b29-ad75-e91426cc213e.html",
       "date": "2026-04-30",
       "district": "南岸",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "180万元"
+      }
     },
     {
       "title": "重庆轨道交通17号线一期工程曾凤路车辆段车场工艺设备采购及集成安装服务（包件二）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/6d18ade6-8d6c-4ad8-a4ec-3c710060d2eb.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区铁山镇、高升镇、玉龙镇等3个镇补充耕地项目（测绘、设计、新增耕地核定）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/c1e2f90a-8100-4151-aa5e-d248250f10c6.html",
       "date": "2026-04-30",
       "district": "大足",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆轨道交通17号线一期工程曾凤路车辆段车场工艺设备采购及集成安装服务项目（包件三）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/bdbc056e-cb27-4172-900a-6faa7748e379.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "黔江磁材料-车载电源产业园（一期配套基础设施建设项目）设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/c4797f83-4e37-4217-b784-77f642d97502.html",
       "date": "2026-04-30",
       "district": "黔江",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约428.90万元"
+      }
     },
     {
       "title": "武隆区火炉镇万峰水厂工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/6182aa21-4a5e-4e11-888c-f7728f4bb3b9.html",
       "date": "2026-04-30",
       "district": "武隆",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "234.6万元"
+      }
     },
     {
       "title": "两山丽苑定向经济适用房二期工程智能化、景观水电、室外小品、弱电、抗震支架等工程（第三次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/3fb95d09-bc62-45f0-a8f7-cfdb464fe033.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "190.56万元"
+      }
     },
     {
       "title": "重庆港涪陵港区清溪作业区工程流动设备三标段（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/ca7a2af7-f9fa-4cdc-b15b-4d0ea51d1cba.html",
       "date": "2026-04-30",
       "district": "涪陵",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆港涪陵港区清溪作业区工程流动设备二标段（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/42f91011-b05d-4e20-bdec-a36904e0b006.html",
       "date": "2026-04-30",
       "district": "涪陵",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆港涪陵港区清溪作业区工程流动设备四标段（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/c31c50e6-2503-43e6-a2a1-af125224034d.html",
       "date": "2026-04-30",
       "district": "涪陵",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆港涪陵港区清溪作业区工程流动设备一标段（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260430/4c923a6d-78fc-4bc5-a671-9cf061139968.html",
       "date": "2026-04-30",
       "district": "涪陵",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "渝开发南樾天宸项目三期（A70 地块二期）公区精装工程（一批次）（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/bc3c5bff-fbfb-40f3-a5fc-18ec5783a04d.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "190万元"
+      }
     },
     {
       "title": "武隆区仁爱天年生态养老园EPC",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/6199648e-55ea-487c-b2e0-323447702ef8.html",
       "date": "2026-04-30",
       "district": "武隆",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "工程总投资",
+        "value": "3亿"
+      }
     },
     {
       "title": "重庆市南川区国有闲置存量房源保障性租赁住房(二期)项目监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/7a8d513d-8524-4dd1-8dcd-c0a72678e34f.html",
       "date": "2026-04-30",
       "district": "南川",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "1520235.54元"
+      }
     },
     {
       "title": "江津区油溪水厂（一期）农村供水保障工程勘察设计（AA202600441）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/01650fab-d58e-4541-823b-9591dada6441.html",
       "date": "2026-04-30",
       "district": "江津",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "447万元"
+      }
     },
     {
       "title": "重庆市江津区龙华镇气雾栽培产业项目设计（AA202600421）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/ec5ffd1b-82a3-4ad6-b53d-60eaa395a621.html",
       "date": "2026-04-30",
       "district": "江津",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "145.82万元"
+      }
     },
     {
       "title": "云阳县高阳、路阳片区提升农村饮水质量项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/9493c213-ca7c-4dfc-8f50-c9c64550a51d.html",
       "date": "2026-04-30",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县磨刀溪郎家段(侏罗纪恐龙公园)岸线环境综合整治项目(码头工程)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260430/fadf005a-b73b-4937-a348-b843a82b6c72.html",
       "date": "2026-04-30",
       "district": "云阳",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳早面营地项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260430/c7f85ab5-3f82-46f1-bf09-d0f1667685d1.html",
       "date": "2026-04-30",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "最高限价",
+        "value": "4800162.94元"
+      }
     },
     {
       "title": "重庆国际生物城标准化制药生产基地及配套设施项目（交安设施）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/becba760-2c25-48ca-b390-7ff9940d0c57.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "707.59789万元"
+      }
     },
     {
       "title": "正阳工业园区产城融合协调发展配套基础设施建设项目（正阳工业园区物流支路工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260430/51872509-0e82-491f-bf7c-d7ed8f2e06ac.html",
       "date": "2026-04-30",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1158.0866万元"
+      }
     },
     {
       "title": "龙溪河防洪救灾应急通道（高安镇新溪、福安、龙井三个村“四好农村公路”）建设工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260429/5937d0fb-1d98-482f-99ca-eccce785bb2c.html",
       "date": "2026-04-29",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "26421803.00元"
+      }
     },
     {
       "title": "彭水自治县农村规模化供水项目-庞溪水厂工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260429/f3801c47-e337-409f-af76-ed721e581e9d.html",
       "date": "2026-04-29",
       "district": "彭水",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约45.44万元"
+      }
     },
     {
       "title": "彭水自治县农村规模化供水项目-鞍子水厂工程、临江村供水管网工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260429/e1692c45-1138-4d80-885f-c774879ccca6.html",
       "date": "2026-04-29",
       "district": "彭水",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约25.36万元"
+      }
     },
     {
       "title": "重庆黔江高新区食品产业园配套基础设施项目施工图设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260429/2d1d13bf-219a-443b-ae71-bb7aae4d23a0.html",
       "date": "2026-04-29",
       "district": "高新区",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "124.398014万元"
+      }
     },
     {
       "title": "开州区2025年国省道养护工程（第二批）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260429/b42e1159-aa10-401a-8d57-d37904866826.html",
       "date": "2026-04-29",
       "district": "开州",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1302.99万元"
+      }
     },
     {
       "title": "鱼胡路口高切坡环境整治改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260429/5d3a125e-a1af-4e06-ad7f-300adfe1b42f.html",
       "date": "2026-04-29",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "650万元"
+      }
     },
     {
       "title": "重庆市丰都中学校第三教学综合楼工程招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260429/588831a6-3207-4817-ba71-8415e615dcb3.html",
       "date": "2026-04-29",
       "district": "丰都",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "6485万元"
+      }
     },
     {
       "title": "巫山县县城供水扩能提升工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260429/2ab1ba62-a360-48b7-bd81-f5921e447eea.html",
       "date": "2026-04-29",
       "district": "巫山",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "5535.54万元"
+      }
     },
     {
       "title": "重庆果园港国家物流枢纽临港产业基地项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260429/ada0e88b-472f-4650-928b-ee031f4c3fbc.html",
       "date": "2026-04-29",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "江津太阳山人文纪念园(一期）EPC设计施工总承包（AA202600411）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260429/fb3e0037-c7f4-45d6-90d6-9cde5cfd47f2.html",
       "date": "2026-04-29",
       "district": "江津",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2253.45万元"
+      }
     },
     {
       "title": "重庆市奉节县林场2024年森林可持续经营项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260429/3776e1e5-21dc-4824-8cc3-ef084795286f.html",
       "date": "2026-04-29",
       "district": "奉节",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "668.01万元"
+      }
     },
     {
       "title": "两江四岸核心区朝天门片区治理提升PPP项目运营维护项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260429/97cdc1ff-d377-4550-ab1a-9557c5d1cfe9.html",
       "date": "2026-04-29",
       "district": "未明显标注",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "巴蜀中学张家花园校区艺术馆装修改造（重新招标）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260429/4fdaaf70-6ec2-4e29-9835-055cc1030612.html",
       "date": "2026-04-29",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约538.16万元"
+      }
     },
     {
       "title": "重庆康悦产业园项目（高新区K06单元02街区Ad02-3-1／06地块）监理招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260429/b59b64a4-b4fd-43bd-811d-c086ae882424.html",
       "date": "2026-04-29",
       "district": "高新区",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约133万元"
+      }
     },
     {
       "title": "国道G243垫江县沙坪至澄溪段新改建工程（一期）二标段施工阶段工程造价全过程控制",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260428/f7d38d3c-0b65-416c-b62d-0e0a56b3fe38.html",
       "date": "2026-04-28",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "彭水自治县农村规模化供水项目-长生供水管网工程、黄家水厂工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260428/86c58541-c2f4-4d84-a610-40b0677086ce.html",
       "date": "2026-04-28",
       "district": "彭水",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "897980元"
+      }
     },
     {
       "title": "大渡口西大附中运动场看台改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260428/25361595-9435-4867-9a04-1433e6e906e8.html",
       "date": "2026-04-28",
       "district": "大渡口",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约2356.97万元"
+      }
     },
     {
       "title": "零星维修整改工程劳务分包（含辅材机具等）标段三：水土项目部零星维修包（含辅材机具等）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260428/5031c599-2145-4739-9f16-7a006a14e398.html",
       "date": "2026-04-28",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "零星维修整改工程劳务分包（含辅材机具等）标段二：鱼复项目部零星维修包（含辅材机具等）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260428/028d296c-2654-4382-a2c3-0c2c7bd1f5e0.html",
       "date": "2026-04-28",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "零星维修整改工程劳务分包（含辅材机具等）标段一：龙兴项目部零星维修包（含辅材机具等）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260428/732bdb06-f6e7-4098-a2bb-3ee7d65a92ea.html",
       "date": "2026-04-28",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "垫江县老城片区防洪排涝通道项目、垫江县东门片区迎春河封盖河道恢复排涝通道建设工程EPC（垫江县丹桂街市场建设项目分布式光伏项目专业分包）（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260428/7ab7a418-3f97-45d8-9f7e-57a546994e78.html",
       "date": "2026-04-28",
       "district": "垫江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1338715.64元"
+      }
     },
     {
       "title": "垫江县城东迎春片区老旧小区改造配套基础设施建设项目（黄沙转盘节点综合整治）人行天桥专业分包（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260428/45600ac1-fedc-4296-97cb-a231626018e8.html",
       "date": "2026-04-28",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约10939762.07元"
+      }
     },
     {
       "title": "沙坪坝区物流园Ah15-1地块规划高中新建工程（一期）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260428/0e943669-e475-44e0-8f27-788ec4bb3ad8.html",
       "date": "2026-04-28",
       "district": "沙坪坝",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "234.09万元"
+      }
     },
     {
       "title": "红岩村片区老旧小区公共空间改造",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260428/03e69d07-348c-40e9-bb07-739aad25e5da.html",
       "date": "2026-04-28",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "806万元"
+      }
     },
     {
       "title": "仙女山街道基础设施安全能力提升项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260428/0290e95b-f324-4cd2-a19a-7419c5bc555a.html",
       "date": "2026-04-28",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "綦江区通惠街道登瀛社区老旧小区改造配套基础设施项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260427/91dd862b-b22e-4205-b19c-6838a46369d8.html",
       "date": "2026-04-27",
       "district": "綦江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "5980.03万元"
+      }
     },
     {
       "title": "重庆市开州区2025年赵家街道柑橘产业加工提升项目（改建厂房、新建无尘车间及配套设施）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260427/4788f437-6e73-4f27-9786-37807af21780.html",
       "date": "2026-04-27",
       "district": "开州",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "205.687574万元"
+      }
     },
     {
       "title": "云阳县S506长洪社区段改线工程（二期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260427/da430eab-0b57-47dc-b1d5-f1960ed87da5.html",
       "date": "2026-04-27",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "垫江县美食街餐车与小吃车采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260427/0153a226-42cf-47db-8398-4eb137229251.html",
       "date": "2026-04-27",
       "district": "垫江",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1862200.00元"
+      }
     },
     {
       "title": "汽摩零部件（O01-05-1-05B地块场平）施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260427/7dbb454e-9a46-4ac8-9a63-1415d91a3f1c.html",
       "date": "2026-04-27",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "766.35885万元"
+      }
     },
     {
       "title": "潼南区县道X802米心至竹台村升级改造工程（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260427/a28d2fa9-4bdc-4054-a4d5-d171fcff3056.html",
       "date": "2026-04-27",
       "district": "潼南",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "811.162086万元"
+      }
     },
     {
       "title": "潼南区医养融合发展项目（一期）EPC",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260427/1bcf724f-c190-4a8d-b728-b264fc2c4b25.html",
       "date": "2026-04-27",
       "district": "潼南",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约2900.00万元"
+      }
     },
     {
       "title": "秀山县东风路平凯片区污水管网改造项目设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260427/a6328b32-11d3-424c-a61b-8f4147a164e5.html",
       "date": "2026-04-27",
       "district": "秀山",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "183.46万元"
+      }
     },
     {
       "title": "通惠中学综合楼改扩建工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/cd302577-7977-4f06-8a28-3c23729e375e.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "7759070.06元"
+      }
     },
     {
       "title": "重庆轨道交通17号线一期工程曾凤路车辆段车场工艺设备采购及集成安装服务（包件五）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/a074cf1c-7410-4579-819e-eebed4d303ad.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆轨道交通17号线一期工程曾凤路车辆段车场工艺设备采购及集成安装服务（包件四）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/272bef42-9be2-4953-8f66-fcc71560fc00.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县S102凉风垭至新津段（K564-K584）灾害防治工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/ac8a83a5-7e49-484b-b760-2251da00ea09.html",
       "date": "2026-04-24",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约562.60万元"
+      }
     },
     {
       "title": "重庆旅游职业学院迁建项目一期工程（勘察设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/9ef8b5e6-b3ea-4e4f-80f7-804c5b256627.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2242.9272万元"
+      }
     },
     {
       "title": "彭水自治县农村规模化供水项目-大垭供水管网工程、大同供水管网工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260424/c426a4d0-6314-4011-8157-f47b0694c0ab.html",
       "date": "2026-04-24",
       "district": "彭水",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约79.24万元"
+      }
     },
     {
       "title": "华中科技大学同济医学院附属协和医院重庆医院项目（信息化首批建设内容）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260424/3ad2baac-73cf-4c4f-a21e-04c40e0bea55.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "永川区南大街街道黄瓜山村2024年度水库移民产业转型升级市级示范项目（室内装修部分）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/b31a183a-bf90-4065-8bb7-00e8b3956791.html",
       "date": "2026-04-24",
       "district": "永川",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "355.04万元"
+      }
     },
     {
       "title": "石柱县仓储物流及农产品批发市场建设项目（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/1b15e48b-f42d-405e-836c-d942d60cfc74.html",
       "date": "2026-04-24",
       "district": "石柱",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1634.72万元"
+      }
     },
     {
       "title": "龙嘴至芭蕉滩龙河两岸农村公路改建及安全生命防护安装工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/251690f2-c380-43ed-b3fb-c9e934a7bcd8.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3100.00万元"
+      }
     },
     {
       "title": "桃花溪流域渝州路、石桥铺、二郎片区地下排水（污水）管网更新改造工程监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260424/db48bcba-996e-4ac7-90b6-2c271d435de3.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "133.82149万元"
+      }
     },
     {
       "title": "井口老旧街区改造设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/356c7321-eade-49c1-9bd6-68e6eb0f918e.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "248万元"
+      }
     },
     {
       "title": "彭水县中心片区老旧小区改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/7137cf40-5e0e-4175-ae1e-053290a66fec.html",
       "date": "2026-04-24",
       "district": "彭水",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约22870.2万元"
+      }
     },
     {
       "title": "彭水县“双创”孵化平台建设项目（装饰装修工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/be50b6d2-3a6e-49dc-b391-76fa849409e2.html",
       "date": "2026-04-24",
       "district": "彭水",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约15117.94万元"
+      }
     },
     {
       "title": "2026年梁平区备战、团结等水库维修养护工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260424/f3cc358d-a1fb-412f-b5b0-500209a43c82.html",
       "date": "2026-04-24",
       "district": "梁平",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约54.37万元"
+      }
     },
     {
       "title": "奉节县兴隆片区老旧小区改造工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260424/56854d33-92cf-4d50-b84e-f77dd2f9775c.html",
       "date": "2026-04-24",
       "district": "奉节",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3164798.74元"
+      }
     },
     {
       "title": "江津区吴滩、珞璜、支坪、石门等13个农村移民安置区饮水安全保障提升工程设备采购及安装（项目编号：AA202600401）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260424/b2eb46b9-34cc-45d5-8f9a-6681676f0e57.html",
       "date": "2026-04-24",
       "district": "江津",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县里市至外郎段公路升级改造工程（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/5f763866-8701-4ff7-b074-86b25b0c4330.html",
       "date": "2026-04-24",
       "district": "云阳",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "14856321.00元"
+      }
     },
     {
       "title": "云阳县亿联建材家居汽车城消防安全隐患整改项目云阳县亿联建材家居汽车城消防安全隐患-整改项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/c0693833-48d3-4b70-86cf-c5c27995068e.html",
       "date": "2026-04-24",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "双桥经开区2026年老旧小区主体改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260424/9d4e534c-2250-4734-8e6f-92b74876f372.html",
       "date": "2026-04-24",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约991.68万元"
+      }
     },
     {
       "title": "城西片区调蓄工程项目及垫江县老城片区排涝通道及设施建设项目、垫江县东门片区迎春河封盖河道恢复排涝通道建设工程EPC （丹桂街农贸市场节点）钢丝网骨架塑料（聚乙烯）复合管、配件采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260424/b6e95cf3-8d8e-41b0-a16d-225c37e3d297.html",
       "date": "2026-04-24",
       "district": "垫江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "879224.7元"
+      }
     },
     {
       "title": "长寿区长寿湖镇云韩路红光村至玉华村村委会段油化改造项目长寿区长寿湖镇云韩路红光村至玉华村村委会段改造项目（重新招标）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/8e4f11b9-8132-4606-8300-28c75d2c05a1.html",
       "date": "2026-04-24",
       "district": "长寿",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约975.96万元"
+      }
     },
     {
       "title": "潼南中学金福校区教育教学配套及智慧校园建设工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/a3c44b00-0c74-4952-b81a-e8cc525a8b29.html",
       "date": "2026-04-24",
       "district": "潼南",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "忠县工业园区废水循环利用工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260424/016c7eb5-1eab-4c87-ae02-70a7a22b9578.html",
       "date": "2026-04-24",
       "district": "忠县",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约109万元"
+      }
     },
     {
       "title": "黔江区小南海至城区引调水工程（1 标段）EPC",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260424/705d2ccf-d61c-49ed-a766-a56013004994.html",
       "date": "2026-04-24",
       "district": "黔江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "9339.55万元"
+      }
     },
     {
       "title": "秀山县洪安镇刘家董片区人居环境改善项目-香樟书林接待中心装饰装修工程（电梯采购及安装工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260424/69a5e82d-c498-4555-b8cb-11b1490a1409.html",
       "date": "2026-04-24",
       "district": "秀山",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "秀山高级中学改扩建工程-教学楼改造",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/16340010-e843-41f6-8b2a-991008ed9403.html",
       "date": "2026-04-24",
       "district": "秀山",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "秀山县洪安镇岩庄片区水美乡村建设项目-亲水设施装配式建筑（交钥匙工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/0967c6b9-8c73-4c82-bef2-59b9b2454ed0.html",
       "date": "2026-04-24",
       "district": "秀山",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "巫溪县特色食农产品洁净车间建设项目EPC（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260424/5e3ce8c6-6d8a-4f49-964d-5e2c72b21f92.html",
       "date": "2026-04-24",
       "district": "巫溪",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "16130871.09元"
+      }
     },
     {
       "title": "开州区丰乐等4个镇街特色农业抗旱供水保障工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260424/f3bfc08c-429f-4671-8871-24e963345a6e.html",
       "date": "2026-04-24",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "开州区渠口等3个镇街特色农业抗旱供水保障工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260424/6bd01c16-0d1a-43c8-8ae3-3894c6f52032.html",
       "date": "2026-04-24",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "296.26万元"
+      }
     },
     {
       "title": "綦江区易旱区域供水保障工程（一期）-乐升坪水厂管网延伸工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/feaa2fca-8709-41ff-a52b-af1966bd7736.html",
       "date": "2026-04-23",
       "district": "綦江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "649.99万元"
+      }
     },
     {
       "title": "綦江区易旱区域供水保障工程（二期）—丁山场镇水厂新建及管网延伸工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/c9273d49-eef5-495d-bd6b-216c76713a73.html",
       "date": "2026-04-23",
       "district": "綦江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约2466.4万元"
+      }
     },
     {
       "title": "綦江区易旱区域供水保障工程（一期）-永新场镇水厂改扩建及管网延伸工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/1f21b278-c98a-4f7d-9798-72a1b855e9ed.html",
       "date": "2026-04-23",
       "district": "綦江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1259万元"
+      }
     },
     {
       "title": "重庆文理学院2026年附属工程项目(供电改造专项工程)红河B区高压外线增容改造招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/276eaa88-8379-489c-a4e2-ca15d1acbba9.html",
       "date": "2026-04-23",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "100万元"
+      }
     },
     {
       "title": "永川区胜利路街道、南大街街道老旧小区供水管网及二次供水设备更新改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260423/31f949a1-4082-425a-ae44-c3cef1347996.html",
       "date": "2026-04-23",
       "district": "永川",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4387.91万元"
+      }
     },
     {
       "title": "江津区先锋镇、李市镇、西湖镇等7个镇街农村供水安全保障工程勘察设计（项目编号：AA202600391）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/b327ab87-c07e-45ce-8be8-94624c3a9271.html",
       "date": "2026-04-23",
       "district": "江津",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约672万元"
+      }
     },
     {
       "title": "忠县乌杨新区标准厂房及配套设施项目（35KV输变电工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/cd3373d3-615e-40c0-9209-3d3247c0b49f.html",
       "date": "2026-04-23",
       "district": "忠县",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3190.700126万元"
+      }
     },
     {
       "title": "三峡广场片区老旧街区转型提质工程监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/7cde3370-c80e-4a99-b9f5-22f2ca0b58fc.html",
       "date": "2026-04-23",
       "district": "未明显标注",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "335万元"
+      }
     },
     {
       "title": "黔江新华艾子工厂化生猪养殖基地建设项目监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/6cf0cb25-40f3-4826-bf82-b8c4139b324f.html",
       "date": "2026-04-23",
       "district": "黔江",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "工程总投资",
+        "value": "24500万元"
+      }
     },
     {
       "title": "巫山县大昌镇、福田镇、双龙镇脆李柑橘抗旱供水保障能力提升工程勘察设计(第二次)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/b959d36b-37cb-4452-8fc0-1105f90b706f.html",
       "date": "2026-04-23",
       "district": "巫山",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "441.00万元"
+      }
     },
     {
       "title": "渝东南再生资源回收利用基地项目（1#、2#、3#厂房及附属设施）-行车工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260423/fd76aac1-5ae2-478a-ba29-ceac8303353b.html",
       "date": "2026-04-23",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "秀山县隘口水厂扩建工程（一标段）一体化净水处理设备采购及安装（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260423/3adbaee5-2b9d-4d1e-aac4-3dc26bd6c563.html",
       "date": "2026-04-23",
       "district": "秀山",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "科创中心装修改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/adae29f2-a6cc-4e3a-8607-6e9829412f9f.html",
       "date": "2026-04-23",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "万州区旧城供水管网改造工程(一期)管材等材料采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260423/1ee1128e-2648-4dc7-a60e-1c763eedf680.html",
       "date": "2026-04-23",
       "district": "万州",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "云阳县栖霞、云安、渠马、双江等4个片区提升农村饮水质量项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/8b234e70-8435-447c-8741-335463f13488.html",
       "date": "2026-04-23",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1041.04万元"
+      }
     },
     {
       "title": "云阳县凤鸣、宝坪、外郎等3个片区提升农村饮水质量项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/0d502734-d728-405a-b979-f9b812087544.html",
       "date": "2026-04-23",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1153万元"
+      }
     },
     {
       "title": "云阳县鱼泉片区提升农村饮水质量项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/62a8cf85-ed91-43d4-8e9b-199e22213558.html",
       "date": "2026-04-23",
       "district": "云阳",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2242.29万元"
+      }
     },
     {
       "title": "长安汽车数智工厂设施改造升级项目建安工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/b4be734d-e0fa-4509-8df8-ecbf0cd56186.html",
       "date": "2026-04-23",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "12565.1万元"
+      }
     },
     {
       "title": "黔江区2026年“四好农村路”建设项目黄溪镇共林村新民垭口至共林活动室道路拓宽工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/e54a2dfa-9795-4b2d-820d-03a1632af50b.html",
       "date": "2026-04-23",
       "district": "黔江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约231万"
+      }
     },
     {
       "title": "黔江区2026年“四好农村路”建设项目黄溪镇兴阳村二组长新田至梅子堡公路硬化工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/d85f4bd4-79c8-49be-aa02-6ece832a5eb3.html",
       "date": "2026-04-23",
       "district": "黔江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约178.5万"
+      }
     },
     {
       "title": "武隆区黄莺乡沙河水库环湖路油化项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/5aeb3d39-cb19-40a8-89c6-d347efe8f04e.html",
       "date": "2026-04-23",
       "district": "武隆",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4355317.00元"
+      }
     },
     {
       "title": "重庆市两江巴蜀嘉和小学EPC总承包工程智能化监控设备采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260423/40f2ca47-64d9-4111-ba68-33a0d8d7f1b0.html",
       "date": "2026-04-23",
       "district": "未明显标注",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "开州区厚坝、金峰镇等片区供水提升工程监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260423/ae549c73-8bcb-4e2d-91e5-678c8c7260ce.html",
       "date": "2026-04-23",
       "district": "开州",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "37.464264万元"
+      }
     },
     {
       "title": "开州区大德镇石沟湾抗旱供水工程（勘察设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260422/53e543cb-1ec0-48a3-a97c-1f9526121add.html",
       "date": "2026-04-22",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "123.44777万元"
+      }
     },
     {
       "title": "开州区大德片区农村供水保障工程（勘察设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260422/79f100bf-583c-43da-8f85-b7ab8b1a1703.html",
       "date": "2026-04-22",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1241494.80元"
+      }
     },
     {
       "title": "彭水自治县普子河流域生态修复工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260422/53d90327-5d28-4ad0-9190-6797afe94076.html",
       "date": "2026-04-22",
       "district": "彭水",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3376.39万元"
+      }
     },
     {
       "title": "重庆果园港国家物流枢纽临港产业基地项目质量检测",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260422/9cb996ff-5660-45c0-9f10-108660685129.html",
       "date": "2026-04-22",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "320万元"
+      }
     },
     {
       "title": "江津区油溪镇、吴滩镇农村供水安全保障工程勘察设计(项目编号：AA202600371)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260422/cdbddcd5-2e7d-4de1-9fde-0fdc651e5815.html",
       "date": "2026-04-22",
       "district": "江津",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约675万元"
+      }
     },
     {
       "title": "粮食加工仓储物流基地项目工程设计（第二次）采购邀请书",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260422/5c1ed642-ad02-44a3-921d-9f950c3f4ba3.html",
       "date": "2026-04-22",
       "district": "未明显标注",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "九龙坡区雨水管网结构缺陷修复整治工程施工招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260422/da1f91df-8662-4d59-aaec-86429858f298.html",
       "date": "2026-04-22",
       "district": "九龙坡",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约3766.87万元"
+      }
     },
     {
       "title": "西彭镇城区内涝整治项目（一期）施工招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260422/2c616d22-a350-41d7-b64a-a83884183e99.html",
       "date": "2026-04-22",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约5551.73万元"
+      }
     },
     {
       "title": "无水港冻库能力升级项目施工比选公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260422/00900a9d-3a9b-40cf-87d5-e557937e7703.html",
       "date": "2026-04-22",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "708820.63元"
+      }
     },
     {
       "title": "铜梁区国家农村产业融合发展示范园产业配套基础设施建设项目（电力工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260422/58738275-66af-4259-828c-275c2ce63944.html",
       "date": "2026-04-22",
       "district": "铜梁",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "100.477552万元"
+      }
     },
     {
       "title": "巴南区鹿角N20、N24-1地块安置房项目正式用电",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260422/5b14999e-c37f-4d56-ae5f-032520243f08.html",
       "date": "2026-04-22",
       "district": "巴南",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区城镇燃气管网更新改造工程（二期）一标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260422/7907e3b0-6731-489a-a2ef-18bf58000652.html",
       "date": "2026-04-22",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2787.20万元"
+      }
     },
     {
       "title": "职教中心实训基地改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260422/d911002b-8105-4782-bdc9-861871d8f37b.html",
       "date": "2026-04-22",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1700万元"
+      }
     },
     {
       "title": "黔江区“非遗赶大集”布展装饰及水电安装工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260422/e4927f42-a0e5-420b-9328-f56a3c019eac.html",
       "date": "2026-04-22",
       "district": "黔江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市中医院中医药传承创新中心建设项目院史馆EPC",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260422/55ed9f81-b56f-41b3-abcd-e229b8addc57.html",
       "date": "2026-04-22",
       "district": "未明显标注",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "石柱县七曜湖水库工程移民安置监督评估（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260422/9f598f18-f12c-4249-8e07-97328a7774b8.html",
       "date": "2026-04-22",
       "district": "石柱",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "202.3595万元"
+      }
     },
     {
       "title": "黔江区“非遗赶大集”采购项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260422/6730bb0c-e213-4945-9d75-5aed2e46443c.html",
       "date": "2026-04-22",
       "district": "黔江",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "长寿区现代化生猪产业链示范园种猪繁殖场改扩建项目（第三次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/24b6a2b0-44a6-4862-8676-02a0c4da17ed.html",
       "date": "2026-04-21",
       "district": "长寿",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3380万元"
+      }
     },
     {
       "title": "开州区临江等片区村镇农村供水管网改扩建工程（勘察设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260421/985e815c-9629-476c-b54c-f787f4a2d6d5.html",
       "date": "2026-04-21",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "318.22万元"
+      }
     },
     {
       "title": "开州白鹤等迁建区村镇供水保障能力提升工程（勘察设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260421/91adaefd-df77-46f5-9c8b-1c3222583064.html",
       "date": "2026-04-21",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "177.16万元"
+      }
     },
     {
       "title": "忠县乌杨新区标准厂房及配套设施项目（35KV输变电工程）、忠县乌杨新区标准厂房及配套设施项目（道路工程）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260421/a4d2f6a8-538c-4ac7-b983-aec3e8745cf9.html",
       "date": "2026-04-21",
       "district": "忠县",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约86.34万元"
+      }
     },
     {
       "title": "忠县拔山、白石、汝溪片区农村饮水质量提升工程（信息化）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260421/e18975ce-fe70-43fa-8f2d-60c3934fe97c.html",
       "date": "2026-04-21",
       "district": "忠县",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "475.456398万元"
+      }
     },
     {
       "title": "垫江县坪山镇新风等7个村农村公路建设工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/7201032d-8f83-48df-b995-a58caf372e7e.html",
       "date": "2026-04-21",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3478040.00元"
+      }
     },
     {
       "title": "垫江县老城片区防洪排涝通道项目、垫江县东门片区迎春河封盖河道恢复排涝通道建设工程EPC（垫江县丹桂街市场建设项目分布式光伏项目专业分包）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/25e0dd6f-253e-4cdb-97ec-8647424d4a1f.html",
       "date": "2026-04-21",
       "district": "垫江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1338715.64元"
+      }
     },
     {
       "title": "威孚力达（重庆）厂房翻新项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/a884fe83-1911-4831-8e94-675d364cf5fe.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "工程总投资",
+        "value": "约980万元"
+      }
     },
     {
       "title": "巫山县巴渝和美城乡养老服务设施建设项目设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/12defb14-4092-4f46-8aad-27e3e02bac06.html",
       "date": "2026-04-21",
       "district": "巫山",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "194.86万元"
+      }
     },
     {
       "title": "武隆区2026年谢石沟项目区小流域综合治理提质增效项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260421/b7735f44-214e-4e17-908f-d273f18cf90c.html",
       "date": "2026-04-21",
       "district": "武隆",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约998万元"
+      }
     },
     {
       "title": "江津区白沙—慈云片区城中村改造（山王坪片区）配套基础设施项目监理（项目编号：AA202600381）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260421/370516dd-3c64-4340-b257-0c739a1bfa95.html",
       "date": "2026-04-21",
       "district": "江津",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约64.25万元"
+      }
     },
     {
       "title": "渝中彭家花园片区老旧小区配套便民公共服务设施项目（二标段）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/57106eca-6772-47bb-9085-aa88357f8b88.html",
       "date": "2026-04-21",
       "district": "渝中",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约2875万元"
+      }
     },
     {
       "title": "瓜子坪露营基地配套设施及明月楼装饰工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/094b3334-f58b-45ca-9252-6810241d4e78.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2752877.52元"
+      }
     },
     {
       "title": "中山三路片区老旧小区配套基础设施建设工程（一期）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/e2587825-f3db-4c87-ac7e-a50d85984e2e.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约505922.73元"
+      }
     },
     {
       "title": "2026年黔江区体育馆周边区域市政设施综合整治工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260421/c642c856-12e2-4593-a2c3-bcc05189c0a0.html",
       "date": "2026-04-21",
       "district": "黔江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "教学楼A栋室内和行政楼外墙维修改造",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/1be4de08-1f59-441b-bd72-22b883ceab97.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "学生宿舍BC栋维修改造",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/768cb17b-e75f-496d-ab81-2f90f3599cc2.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "585.187484万元"
+      }
     },
     {
       "title": "龙兴镇乡村振兴融合发展示范项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/d2528452-bacc-4395-a375-11d4498b4b99.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "912.62万元"
+      }
     },
     {
       "title": "鱼洞长江大桥南桥头立交工程监测",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260421/d5c0f36e-64c0-472b-9815-60a3391ca64b.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "快速路五联络线宝山大桥西延伸段（渝武高速至江家坪立交）监测",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260421/13256500-fe7f-42a4-8b37-1a2818d6bf38.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "八横线白市驿隧道至黄桷坪长江大桥段工程监测",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260421/9e1db4cd-4226-4159-b168-e0239014ff69.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "黔江区太极镇李子村民宿项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260421/ffe2ccce-725f-4cab-a96b-9c12cd156e9e.html",
       "date": "2026-04-21",
       "district": "黔江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "快速路二纵线华岩至跳磴段工程-华岩立交二期监测",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260421/7ae99921-e5df-4bc5-acc1-93115156da8b.html",
       "date": "2026-04-21",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "忠县石宝镇片区水土流失综合治理工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260420/035bc83f-7d78-48b2-b790-1f1341e2c8d6.html",
       "date": "2026-04-20",
       "district": "忠县",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "96.6万元"
+      }
     },
     {
       "title": "忠县忠州街道片区水土流失综合治理工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260420/8860474a-fbe3-4bef-88f8-5b5cd42854fd.html",
       "date": "2026-04-20",
       "district": "忠县",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约158万元"
+      }
     },
     {
       "title": "开州区厚坝镇农田防护区排涝设施完善工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260420/cf705300-8e57-4fae-be1c-9c0d562b8e23.html",
       "date": "2026-04-20",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "开州区汉丰、渠口、赵家、长沙等乡镇农村供水保障能力提升工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260420/4cd615fc-a8e1-4288-906e-71f743889e41.html",
       "date": "2026-04-20",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "221.09247万元"
+      }
     },
     {
       "title": "开州区洗马滩水库工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260420/896e948e-4f0d-4f90-bf59-3b6133664c79.html",
       "date": "2026-04-20",
       "district": "开州",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "803.896395万元"
+      }
     },
     {
       "title": "开州区竹溪等片区村镇农村供水能力提升建设工程（勘察设计）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260420/60c76b32-1c50-4fc5-ac4e-0adf34c25305.html",
       "date": "2026-04-20",
       "district": "开州",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3063516.75元"
+      }
     },
     {
       "title": "长寿经开区八颗智能装备产业园A区扩建项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260420/778096bd-4e81-42ec-a34a-4ad4de6cc9e8.html",
       "date": "2026-04-20",
       "district": "长寿",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "7708万"
+      }
     },
     {
       "title": "蒲草田片区十号线上盖及周边建设项目1-3层改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260420/400b334b-d318-4d16-8c57-b7e25d9a7c3f.html",
       "date": "2026-04-20",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "179万元"
+      }
     },
     {
       "title": "黔江区黄溪镇人工影响天气固定炮站建设项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260420/7494552a-1d91-41c7-8930-fe38cf977797.html",
       "date": "2026-04-20",
       "district": "黔江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约39.95万"
+      }
     },
     {
       "title": "市农科院武陵山分院白土乡示范基地安全设施项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260420/84074b0a-2491-41ef-b0be-e596f23c98a5.html",
       "date": "2026-04-20",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆中烟工业有限责任公司重庆卷烟厂卷包车间生产环境降噪改造",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260420/796141c7-151e-4c12-9e99-01a6c8a7e1f3.html",
       "date": "2026-04-20",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "工程总投资",
+        "value": "约1397.61万元"
+      }
     },
     {
       "title": "九寨印象小区消防环网整改工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260420/0840a694-6ebe-4ec0-a9a9-abb188046db2.html",
       "date": "2026-04-20",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1281485.63元"
+      }
     },
     {
       "title": "市农科院武陵山分院濯水示范基地安全设施建设项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260420/9f4332d5-b6d3-4f35-8688-447accc63d68.html",
       "date": "2026-04-20",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "九寨印象小区消防环网整改工程监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260420/08958767-6279-435f-aff5-84d6021aedea.html",
       "date": "2026-04-20",
       "district": "未明显标注",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "30800.00元"
+      }
     },
     {
       "title": "国家税务总局云阳县税务局青龙税务所综合业务办公用房维修改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/b0e16bac-fba1-4e80-bff5-85c637accc46.html",
       "date": "2026-04-17",
       "district": "云阳",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "4941538.97元"
+      }
     },
     {
       "title": "龙兴智能制造基地（龙兴组团I分区I1-1-6等8宗地项目）二期宿舍空调采购及安装",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/49cc0964-de5c-4de4-8bf6-7533d92dfcc1.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "梁平区小型水源整治工程（东山、西山分散式供水工程饮用水水源）和重庆市梁平区七里沟水库至大沟水厂、大观水厂供水工程施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260417/4376a0d2-6c81-49f5-a77d-19ee6e31cb8f.html",
       "date": "2026-04-17",
       "district": "梁平",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1170万元"
+      }
     },
     {
       "title": "白涛工业园区储罐区安全整治工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/13e30f32-ffcd-425a-9605-3d59497cb940.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "10671.35万元"
+      }
     },
     {
       "title": "9202项目C11区滑坡治理工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260417/3b1daae0-5968-4fb3-9bfb-103b0aac06d6.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "黔江区工业园区老旧厂区改造提升项目（三期）设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/b09d01c9-a6b9-4db8-82b3-b8b512b7fea2.html",
       "date": "2026-04-17",
       "district": "黔江",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "83.1万元"
+      }
     },
     {
       "title": "片区基础设施整治工程（苗木采购）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260417/8cb1d92b-5895-4e74-8b34-687227d47f5f.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "陶家园区物业服务项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260417/33216051-7e4b-412b-a64b-dc857d34954b.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "运营/服务"
+      "type": "运营/服务",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "335万元"
+      }
     },
     {
       "title": "广安市川渝高竹新区高滩片区城中村改造项目、广安市川渝高竹新区高滩片区城中村改造项目(二期)及川渝高竹新区安置房建设项目(一期)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/630a2c33-f3f5-48ae-ab86-8f77fc9473dd.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "44600万元"
+      }
     },
     {
       "title": "市农科院武陵山分院邻鄂镇示范基地安全设施项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260417/04e74bfb-1860-4563-9336-db180da1a651.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "唐家沱污水处理厂四期扩建工程10kV电力外线施工总承包",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260417/77a7c010-8d85-46d2-872b-b2ab9cd36abf.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "690万元"
+      }
     },
     {
       "title": "酉阳县龚滩镇河坎上滑坡治理工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260417/d5013f11-6ef4-423f-8931-38188760d192.html",
       "date": "2026-04-17",
       "district": "酉阳",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约451万元"
+      }
     },
     {
       "title": "北碚区老旧小区雨水管道更新改造项目（二期）招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260417/05668885-235e-43ef-9997-b3b98b1c70ea.html",
       "date": "2026-04-17",
       "district": "北碚",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "5546.80万元"
+      }
     },
     {
       "title": "大足石刻北山摩崖造像第105-123号窟保护修缮工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/c2bdd765-336b-49ab-a786-af61fdd0b7b4.html",
       "date": "2026-04-17",
       "district": "大足",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "251.38万元"
+      }
     },
     {
       "title": "东海阿特豪斯小区消防防排烟系统维修整改工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/30456078-775e-4d20-b88a-c9544ca5f765.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "黔江区工业园区老旧厂区改造提升项目（二期）设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/23fceb8c-d37d-4d99-9e12-c565ae3d88f2.html",
       "date": "2026-04-17",
       "district": "黔江",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "201277.5元"
+      }
     },
     {
       "title": "挑花厂3-5层装修改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/b61d9bc1-89cc-474a-9a13-e7e1a3fe9b53.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1300万"
+      }
     },
     {
       "title": "重庆康悦产业园项目（高新区K06单元02街区Ad02-3-1／06地块）土石方工程招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/6cce8cfa-5b39-4cb4-8194-1c51270c4bc8.html",
       "date": "2026-04-17",
       "district": "高新区",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约600万元"
+      }
     },
     {
       "title": "重庆市双石监狱高压电缆线路施工项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260417/ba62997f-1b6b-460e-9004-5cd8acac5d24.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市万盛经开区黑山镇老黑山石笋危岩治理工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260417/f2ddcc6c-d189-4734-8ebe-9d1c2f8f877d.html",
       "date": "2026-04-17",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约890万元"
+      }
     },
     {
       "title": "重庆零部件基地改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260416/001bb6b4-8311-4c52-a0b0-f5f5bada9e8b.html",
       "date": "2026-04-16",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1900万元"
+      }
     },
     {
       "title": "垫江县曹回镇安山村、乐安村2026年度市级美丽移民村建设项目预拌混凝土采购（第二次）竞争性比选公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260416/be142c81-9f34-4d46-a98f-69c169a72bc8.html",
       "date": "2026-04-16",
       "district": "垫江",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约928000.00元"
+      }
     },
     {
       "title": "潼南高新区东B区新石变电站场平及进场道路工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260416/6080d165-be56-4645-a8c3-8c515a821e98.html",
       "date": "2026-04-16",
       "district": "高新区",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区棠香街道红星社区1、8、9组和三合社区8组张世平家旁至彭高成家等11条森林防火通道",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260416/dd7eab89-57c0-4d74-81d2-a3288cdde428.html",
       "date": "2026-04-16",
       "district": "大足",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足区中敖镇排危更新改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260416/0c06a053-c140-4513-8bcc-e5fb9b067bfd.html",
       "date": "2026-04-16",
       "district": "大足",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "黔江区石家镇（茶溪、火石垭片区）农村饮水质量提升工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260416/a5dc68fd-0b11-4303-ab3d-730b965700e8.html",
       "date": "2026-04-16",
       "district": "黔江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约209.32万元"
+      }
     },
     {
       "title": "中心商务及行政中心老城区污水管网更新改造工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260416/8afe0a06-85fc-4f9c-a1ab-b8e019d9cee4.html",
       "date": "2026-04-16",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "260.216004万元"
+      }
     },
     {
       "title": "沙坪坝区沿江流域污水管网更新改造工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260416/3a6c134f-b47c-4232-a5e9-3608a50ad282.html",
       "date": "2026-04-16",
       "district": "沙坪坝",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "242.222724万元"
+      }
     },
     {
       "title": "科学城周边旧城片区污水管网更新改造工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260416/1805ef1b-fd7f-4edb-8949-5639c6ddc223.html",
       "date": "2026-04-16",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "159.647282万元"
+      }
     },
     {
       "title": "万州区旧城供水管网改造工程（一期）土建及安装",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260416/a4b1aa56-b330-41f6-a88a-1116bae3c3ee.html",
       "date": "2026-04-16",
       "district": "万州",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "7500万元"
+      }
     },
     {
       "title": "云阳县路阳至江口互通段公路升级改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260416/af9de02b-a127-491c-be40-146eeebb139d.html",
       "date": "2026-04-16",
       "district": "云阳",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "66361015.00元"
+      }
     },
     {
       "title": "垫江县迎春河保合寺传统风貌更新EPC项目酒店厨房设备采购及安装竞争性比选公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260415/2ff8dc02-1550-4bd4-b4ae-22e0c7ee18b7.html",
       "date": "2026-04-15",
       "district": "垫江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "861042.00元"
+      }
     },
     {
       "title": "青杠110千伏输变电工程变压器采购（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/1b9c7bb6-b7f7-4d89-abeb-760a0ed51e99.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "建桥C区O03／01、O08-1／01地块配套道路工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260415/ca4d8d0f-2a53-4615-ac76-3c996b201214.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "西部（重庆）科学城九龙坡片区农村路网建设项目（一期）—九港大道安全通行能力提升工程（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/fbb3a66d-9a40-465e-8ba3-dafe52b57ada.html",
       "date": "2026-04-15",
       "district": "九龙坡",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "821.82万元"
+      }
     },
     {
       "title": "开州区南河临江镇段支流河道治理工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260415/c7e94376-43ae-481d-8f43-d8fe43fcb092.html",
       "date": "2026-04-15",
       "district": "开州",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "215.71万元"
+      }
     },
     {
       "title": "2025-2027年度（2年）供水安装及零星抢维修工程施工外包（九标段）（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260415/1d410f8b-27e1-4085-8ba8-68ab1c3bbfa3.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "2025-2027年度（2年）供水安装及零星抢维修工程施工外包（八标段）（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260415/4a5f97f0-0428-489e-b8b1-dc05e3bf94f5.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "2025-2027年度（2年）供水安装及零星抢维修工程施工外包（六标段）（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260415/d582b91a-0aea-4f5a-a507-d18b4bb5be33.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "成渝中线高铁预留通道安全整治项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/b6659d64-f377-462f-95aa-ec8e68ad85ae.html",
       "date": "2026-04-15",
       "district": "渝中",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "527.338792万元"
+      }
     },
     {
       "title": "重庆市江津区鼎山街道艾坪山片区内涝治理工程施工图设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260415/a49eea24-bba0-4804-91ff-825d93f657a5.html",
       "date": "2026-04-15",
       "district": "江津",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "150万元"
+      }
     },
     {
       "title": "2025-2027年度（2年）供水安装及零星抢维修工程施工外包（一标段）（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260415/92083499-b445-45bf-bf77-7bb0c3df792b.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "巫溪西门车站修缮工程（宁河街道综合文化服务中心建设及设备购置）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/25aa0465-10ca-4631-aa05-ce6ae1a4e726.html",
       "date": "2026-04-15",
       "district": "巫溪",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "568.57万元"
+      }
     },
     {
       "title": "龙湖悠山郡消防水管网维修工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/a6c851e5-f48a-444b-8c72-f7693cdabf38.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "万州区龙都街道沙塘小区等老旧小区改造配套基础设施项目等8个项目打捆（二期）施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/897ee0a9-ea8b-4f08-a3a0-7111abb6b4da.html",
       "date": "2026-04-15",
       "district": "万州",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约11315.05万元"
+      }
     },
     {
       "title": "万州区龙都街道沙塘小区等老旧小区改造配套基础设施项目等8个项目打捆（二期）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/a8cc7da0-f273-4a64-9273-0498a440fbdd.html",
       "date": "2026-04-15",
       "district": "万州",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约169.72575万元"
+      }
     },
     {
       "title": "正阳工业园区临时停车场项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260415/dc897da0-ebb7-435a-916d-283707ac2ea4.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆建峰化工股份有限公司一化尿素装置工艺尾气回收治理项目EP标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260415/0803a7d6-fdef-4db9-9a19-268757bb6d96.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "F6人工智能扩建项目废水站扩容工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/dd2972c9-4f51-459e-bae5-7662caa3800c.html",
       "date": "2026-04-15",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1600万元"
+      }
     },
     {
       "title": "巫山县邮件处理及物流配送中心(二期)",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260415/f45dad2d-8f8d-4aaa-a692-2ccd7d688e18.html",
       "date": "2026-04-15",
       "district": "巫山",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1400.35万元"
+      }
     },
     {
       "title": "梁平区2026年村级水厂提质增效项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260415/62bd2ec2-9dca-4a01-9673-77eff565836a.html",
       "date": "2026-04-15",
       "district": "梁平",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约56万元"
+      }
     },
     {
       "title": "国道G319线K2116+663～K2159+720段灾害防治项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260414/68e3d0ee-f45c-4e0a-b738-92da1c976f43.html",
       "date": "2026-04-14",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约838.12万元"
+      }
     },
     {
       "title": "重庆市黔江区G319高成线公路安全设施精细化提升工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260414/9e730f9e-6c93-4f76-b3d9-ab842d137c6b.html",
       "date": "2026-04-14",
       "district": "黔江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1200.33万元"
+      }
     },
     {
       "title": "荣昌区黄金坡片区城中村改造项目配套基础设施（对外连接道路）勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260414/4b68f460-ec94-40eb-890d-9e2c21962559.html",
       "date": "2026-04-14",
       "district": "荣昌",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "478.961万元"
+      }
     },
     {
       "title": "农畜产品加工区平台项目和荣昌猪精深加工区建设项目正式用电工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260414/53915041-882d-414f-b6b2-9ecb594281f4.html",
       "date": "2026-04-14",
       "district": "荣昌",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3400万元"
+      }
     },
     {
       "title": "彭水自治县靛水老街城市更新项目一期（监理）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260414/87b022ca-bfd1-477c-a57a-b8569f289663.html",
       "date": "2026-04-14",
       "district": "彭水",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "63.07万元"
+      }
     },
     {
       "title": "彭水县汉葭街道老车站片区老旧小区改造及配套基础设施建设项目(设计）第二次",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260414/94d6a43e-607e-4964-a9d1-64d68109bdf2.html",
       "date": "2026-04-14",
       "district": "彭水",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "255.69万元"
+      }
     },
     {
       "title": "垫江县城市更新—城镇老旧小区改造（城东迎春片区、城东迎春片区、城北白银桥片区、城西体育场片区）迎春里片区等3个节点沥青道路铺设专业分包",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260414/44febc69-68ab-442c-8de6-714552a6452e.html",
       "date": "2026-04-14",
       "district": "垫江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约2329491.03元"
+      }
     },
     {
       "title": "花石公园3号楼建筑功能改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260414/02fb6083-c8f5-4924-88bc-b05104079452.html",
       "date": "2026-04-14",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "850万元"
+      }
     },
     {
       "title": "茶园污水厂南岸区范围配套污水管网整治工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260414/ee913593-2918-4a8e-b9fc-8270e7985484.html",
       "date": "2026-04-14",
       "district": "南岸",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "282.634万元"
+      }
     },
     {
       "title": "南岸区苦溪河西岸市政污水管网提升改造工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260414/5817a6ec-1c83-419c-baed-5147a16a3e8a.html",
       "date": "2026-04-14",
       "district": "南岸",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "262.7592万元"
+      }
     },
     {
       "title": "黔江三岔河旅游集市设备采购项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260414/10be28e7-9641-4fef-88db-a89ec6836e91.html",
       "date": "2026-04-14",
       "district": "黔江",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约193.7160万"
+      }
     },
     {
       "title": "9603项目210号建筑物工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260414/2d7c2805-b091-431b-8cc1-41c2aee60c67.html",
       "date": "2026-04-14",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "黔江区农业农村委办公楼修缮项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260414/3aa38ca7-98e9-4e3c-a7a1-b7558eb76a1c.html",
       "date": "2026-04-14",
       "district": "黔江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市开州区赵家街道朝阳社区裕和街1-27号及周边城镇老旧小区改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260414/a9ea29ba-16cf-4172-a64d-d6a24820547e.html",
       "date": "2026-04-14",
       "district": "开州",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "661.562058万元"
+      }
     },
     {
       "title": "江北区米亭子小学校改扩建工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/9367f0ce-ff0f-4de2-9d8f-959ddbf4ce64.html",
       "date": "2026-04-13",
       "district": "江北",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "34961636.69元"
+      }
     },
     {
       "title": "酉阳县运输设施提升改造项目南站改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/52b302c3-0998-4b51-91e3-77739417cce5.html",
       "date": "2026-04-13",
       "district": "酉阳",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1593.12万元"
+      }
     },
     {
       "title": "沙坪坝上桥片区排水管网更新改造工程项目（一期）三标段",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260413/55388c17-5365-4aba-bc29-bd5c0beb6d3e.html",
       "date": "2026-04-13",
       "district": "沙坪坝",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "金泰·汽车物流（配套）产业基地项目一期道路工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260413/4f61cf9f-3ffe-4261-9aeb-096806d57b75.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "250万元"
+      }
     },
     {
       "title": "市郊铁路重庆中心城区至永川线工程CK152+435.000～CK168+799.063范围内的土建工程和轨道工程第三方质量检测",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260413/dce62ba3-ae70-4ed4-9f67-7a56bfae120e.html",
       "date": "2026-04-13",
       "district": "永川",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1700万元"
+      }
     },
     {
       "title": "綦江区公安局永城派出所迁建工程（智能化及室外零星工程）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/2285f1e2-147a-44a8-8f32-315f597becdc.html",
       "date": "2026-04-13",
       "district": "綦江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约37.28万元"
+      }
     },
     {
       "title": "皓月小区建设共享空间项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/0d6bb02d-9253-4e1e-9e06-8e78548e8413.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "长寿区长寿湖镇云韩路红光村至玉华村村委会段油化改造项目长寿区长寿湖镇云韩路红光村至玉华村村委会段改造项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/0a9bd831-1885-4595-b90a-e460335dbe8c.html",
       "date": "2026-04-13",
       "district": "长寿",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "975.961万元"
+      }
     },
     {
       "title": "南岸区2025年供水管网更新改造工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260413/6ba4924b-2c34-4087-bdd1-2b6e64e0f37f.html",
       "date": "2026-04-13",
       "district": "南岸",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "220万元"
+      }
     },
     {
       "title": "黔江区2025年沙坝镇入户道路（村社便道）硬化项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/c945abdd-1143-4a52-b4e8-0290ef04c2b2.html",
       "date": "2026-04-13",
       "district": "黔江",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "黔江区水市镇青龙等（5）个村市级农村土地整治项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260413/d48076bc-d54a-4364-80f0-033ec0040e2a.html",
       "date": "2026-04-13",
       "district": "黔江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1072.91万元"
+      }
     },
     {
       "title": "重庆轨道交通3号线可视化接地系统技术改造施工项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/6decae75-6ae1-4893-b4e7-ec2a26944f7c.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "明月天香旅游度假区南入口建设项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260413/523bcdf1-b203-452b-abb9-6d5d2ea81285.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "11709672.15元"
+      }
     },
     {
       "title": "茅溪流域、唐桂新城及铁山坪片区污水管道更新改造工程设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260413/c460d059-5a60-426c-9dfb-524936a1ea66.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "241.910867万元"
+      }
     },
     {
       "title": "2025年中心城区市级绿道示范项目（红锦绿道和渝鲁绿道）一标段（重新招标）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260413/8b94e073-7b48-43ed-971c-7d8cd39bea33.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约6519.93万元"
+      }
     },
     {
       "title": "2025年中心城区市级绿道示范项目（红锦绿道和渝鲁绿道）二标段（重新招标）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260413/ee2dbac1-204b-4330-86ec-d88b25b810c1.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约6519.93万元"
+      }
     },
     {
       "title": "重庆市开州区郭家镇泡桐树滑坡（Ⅰ号滑坡）治理工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260413/aee09218-4da4-4065-ab3e-a04baeaff062.html",
       "date": "2026-04-13",
       "district": "开州",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "长安汽车数智工厂设施改造升级项目工程监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/b1e7724d-23df-4a4e-a99b-1a7b3e93275b.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "178.68万元"
+      }
     },
     {
       "title": "渝兴37号地块项目（A02-6地块）商业展示区施工总承包工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260413/561e09fb-e1a3-4d32-8ff4-2884c77edf82.html",
       "date": "2026-04-13",
       "district": "未明显标注",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "18000万元"
+      }
     },
     {
       "title": "沙坪坝区物流园Ah15-1地块规划高中新建工程（一期）施工",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/40392bcc-5491-43eb-808a-b8b45a174b73.html",
       "date": "2026-04-10",
       "district": "沙坪坝",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约3亿元"
+      }
     },
     {
       "title": "重庆市第一中学校学生三食堂新建工程电梯采购及安装项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/cf57997e-ee28-4776-a64f-c483a1ab043a.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市第一中学校学生三食堂新建工程空调采购及安装项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/d2aca7ae-2bf9-49ec-93a5-ce7734dd1df6.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "垫江县高新区削峰填谷储能第五批第二次设备采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/f4e7221c-7c8b-4559-b2fc-44ba06e2ef60.html",
       "date": "2026-04-10",
       "district": "高新区",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市沙坪坝区妇幼保健院建设工程（一期）医院信息化",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/a2e52474-cf4e-40e0-b9eb-e39c868e8d38.html",
       "date": "2026-04-10",
       "district": "沙坪坝",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1400万元"
+      }
     },
     {
       "title": "粮食加工仓储物流基地项目工程设计采购邀请书",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/d5b1e96d-9bc5-439d-a015-e3c5ebe27514.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "设计"
+      "type": "设计",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市开州区三峡库区地质灾害应急救援站点建设工程勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/cf692d5f-60ca-418b-a405-8586b532b6d2.html",
       "date": "2026-04-10",
       "district": "开州",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约108.8905万元"
+      }
     },
     {
       "title": "陆港智造城电力扩容改造工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/e57d4fa6-881b-45a0-b26b-7403ce350254.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1459万元"
+      }
     },
     {
       "title": "重庆博丰年产18万吨电解铝项目三标段EPC",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260410/9ce79c09-934f-4683-8a37-c28f082b840f.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "63531万元"
+      }
     },
     {
       "title": "宝顶小住配套设施建设工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/8eff8451-ce33-4308-85b4-45f63c8266a2.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "312.29万元"
+      }
     },
     {
       "title": "秀山县数据谷建设项目展陈设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/43d0fa75-5ac1-4d51-8b79-b3df8f4ecae6.html",
       "date": "2026-04-10",
       "district": "秀山",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "95.4万元"
+      }
     },
     {
       "title": "沙坪坝区智慧农业产业园建设项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/8c91422d-5bdc-4602-ad66-80408399a347.html",
       "date": "2026-04-10",
       "district": "沙坪坝",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "大足高新区龙水园·大足龙水国际智能五金及市场采购贸易产业园项目一期—北四路",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260410/12f39fa7-743f-4522-9a71-ba3e9c5e3075.html",
       "date": "2026-04-10",
       "district": "高新区",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "11276.33万元"
+      }
     },
     {
       "title": "涪陵区江北片区农村移民安置区饮水安全提升工程钢管采购项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260410/058dd67d-cb5e-4036-a241-4bdfb5a11ba8.html",
       "date": "2026-04-10",
       "district": "江北",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "凤凰山产业园配套设施项目-磁器口凤凰山城市更新项目设备采购及安装工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/2b3ba3b5-98c3-454e-b95e-bec25828d15a.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市三峡水务有限责任公司2026年度设备维护维修服务项目（包一、包二）重庆市三峡水务有限责任公司2026年度设备维护维修服务项目（包一）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260410/9494e1b1-712e-49fd-a023-ed0679835058.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆市三峡水务有限责任公司2026年度设备维护维修服务项目（包一、包二）重庆市三峡水务有限责任公司2026年度设备维护维修服务项目（包二）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260410/70d02143-2530-4f44-8a98-0c5d95e19fa8.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "采购/设备"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "重庆医药高等专科学校标准化遗体捐献接受站建设项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/d1918ecf-63a9-482e-815f-ac25f52fc896.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "26教学楼智慧教室整体建设（续建）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/b8a0cd9c-c9ef-4477-a595-93b511a30ef5.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约1296万元"
+      }
     },
     {
       "title": "万州区旧城供水管网改造工程（三期）管材等材料采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260410/d5d18349-51c1-4065-ba7f-85299b891de7.html",
       "date": "2026-04-10",
       "district": "万州",
-      "type": "施工"
+      "type": "采购/设备",
+      "amount": {
+        "label": "金额",
+        "value": "正文未识别到"
+      }
     },
     {
       "title": "秀山县梅江河沿岸排水管道更新改造工程(凤栖南路等三个片区)设计（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260410/65dc30dc-ad01-4ea4-bc84-f2a9ee5e989b.html",
       "date": "2026-04-10",
       "district": "秀山",
-      "type": "施工"
+      "type": "设计",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "73.44万元"
+      }
     },
     {
       "title": "重庆市奉节县天赐湖水库一期工程复建公路初步设计阶段勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/4486fae3-b71a-4cd8-b6b1-22e1ee58eb62.html",
       "date": "2026-04-10",
       "district": "奉节",
-      "type": "设计"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约350万元"
+      }
     },
     {
       "title": "悦来污水系统管网更新提升工程（渝北片区）监理招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260410/b8528238-84db-447b-aa63-bef80a4b7109.html",
       "date": "2026-04-10",
       "district": "渝北",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "148.398684万元"
+      }
     },
     {
       "title": "肖家河流域两港大道混流箱涵出水水质提升工程监理招标公告",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260410/3d7fcedd-5a89-412c-897c-f346c66f4f84.html",
       "date": "2026-04-10",
       "district": "未明显标注",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "150.306942万元"
+      }
     },
     {
       "title": "潼南高新区东区B区消防站项目工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260410/930fac29-d373-4f83-87ed-8616e1bbc2eb.html",
       "date": "2026-04-10",
       "district": "高新区",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "2300万"
+      }
     },
     {
       "title": "乌江涪陵榨菜绿色智能化生产基地（一期）8#车间二层装饰装修及安装工程（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260409/1e883711-67e6-44b3-8412-49348ac09008.html",
       "date": "2026-04-09",
       "district": "涪陵",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约55082430.35元"
+      }
     },
     {
       "title": "大足区2026年西北水库项目区小流域综合治理提质增效项目",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260409/d653c80a-d8f4-4cbe-b97b-97cf483d2696.html",
       "date": "2026-04-09",
       "district": "大足",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约875.36万元"
+      }
     },
     {
       "title": "重庆市璧山区璧北“平急两用”旅游居住设施建设项目（一期）—设施农业喜观村1地块、将军村1地块",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001010/20260409/369a3d8f-6244-41d1-9da2-5a8a3d608ffe.html",
       "date": "2026-04-09",
       "district": "璧山",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "3200.31万元"
+      }
     },
     {
       "title": "垫江县城市更新—城镇老旧小区改造配套基础设施建设项目（城东迎春片区、城中小平桥片区、城北白银桥片区、城西体育场片区）EPC项目-（迎春里社区改造）花岗石采购",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260409/23dc540a-ae86-484e-bee9-84e422ab567b.html",
       "date": "2026-04-09",
       "district": "垫江",
-      "type": "EPC/总承包"
+      "type": "EPC/总承包",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "1680350.00元"
+      }
     },
     {
       "title": "重庆市五布河幸福河湖建设项目（巴南段）勘察设计",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260409/035f79de-1f20-4d3c-966d-08b870a1e72e.html",
       "date": "2026-04-09",
       "district": "巴南",
-      "type": "施工"
+      "type": "勘察",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约442.15万元"
+      }
     },
     {
       "title": "万州区旧城供水管网改造工程（一期）监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001002/20260409/e920f763-eac9-475c-94cb-550b12455eb5.html",
       "date": "2026-04-09",
       "district": "万州",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约132万元"
+      }
     },
     {
       "title": "重庆轨道交通27号线长江隧道航道炸礁工程监理项目（第二次）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260409/42675ea6-a8a1-4b5f-89cd-34f02f9ea788.html",
       "date": "2026-04-09",
       "district": "未明显标注",
-      "type": "监理"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "85.36万元"
+      }
     },
     {
       "title": "重庆八中宏帆中学高中部建设工程监理",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260409/3fd61ef9-6707-4e62-8f19-db955c4d5b0b.html",
       "date": "2026-04-09",
       "district": "未明显标注",
-      "type": "施工"
+      "type": "监理",
+      "amount": {
+        "label": "监理合同估算金额",
+        "value": "约337.74万元"
+      }
     },
     {
       "title": "金凤中心居住小区一组团景观工程",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001001/20260409/df03e967-d3e4-4800-aa3d-a6954f0fbc77.html",
       "date": "2026-04-09",
       "district": "未明显标注",
-      "type": "其他"
+      "type": "其他",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "700万元"
+      }
     },
     {
       "title": "綦江区县域一体化推进生态清洁小流域工程建设项目（一期）",
       "url": "https://www.cqggzy.com/xxhz/014001/014001001/014001001007/20260409/5d8b2ae8-9397-4948-af4f-203bd133bb65.html",
       "date": "2026-04-09",
       "district": "綦江",
-      "type": "施工"
+      "type": "施工",
+      "amount": {
+        "label": "合同估算金额",
+        "value": "约3600万元"
+      }
     }
   ],
   "byType": [
     [
       "施工",
-      246
+      175
     ],
     [
       "其他",
       123
     ],
     [
-      "设计",
-      41
+      "采购/设备",
+      52
     ],
     [
-      "采购/设备",
-      38
+      "勘察",
+      44
+    ],
+    [
+      "设计",
+      36
+    ],
+    [
+      "监理",
+      28
     ],
     [
       "EPC/总承包",
       27
     ],
     [
-      "监理",
-      14
-    ],
-    [
       "运营/服务",
-      11
+      15
     ]
   ],
   "byDistrict": [
@@ -3928,7 +5935,7 @@
         const text = [item.title, item.date, item.district, item.type].join(" ").toLowerCase();
         return (!needle || text.includes(needle)) && (!type.value || item.type === type.value) && (!district.value || item.district === district.value);
       });
-      rows.innerHTML = filtered.map(item => '<tr><td><a class="title-link" target="_blank" href="'+esc(item.url)+'">'+esc(item.title)+'</a></td><td class="muted">'+esc(item.date)+'</td><td><span class="pill">'+esc(item.district)+'</span></td><td><span class="pill type">'+esc(item.type)+'</span></td></tr>').join("");
+      rows.innerHTML = filtered.map(item => '<tr><td><a class="title-link" target="_blank" href="'+esc(item.url)+'">'+esc(item.title)+'</a><div class="amount-line">中标/估算金额：<strong>'+esc(item.amount?.value || "正文未识别到")+'</strong><span class="muted">（'+esc(item.amount?.label || "金额")+'）</span></div></td><td class="muted">'+esc(item.date)+'</td><td><span class="pill">'+esc(item.district)+'</span></td><td><span class="pill type">'+esc(item.type)+'</span></td></tr>').join("");
     }
     [q, type, district].forEach(el => el.addEventListener("input", render));
     render();
